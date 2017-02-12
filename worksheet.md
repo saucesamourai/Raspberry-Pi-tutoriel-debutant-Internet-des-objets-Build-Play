@@ -1,6 +1,11 @@
 # Getting started with physical computing
+# Premiers pas dans l'univers de l'Internet des Objets
 
 ## GPIO pins
+## Les broches GPIO
+
+Une des caractéristiques puissantes du Raspberry Pi, c'est sa rangée broches GPIO au bord de la carte. GPIO signifique General-Purpose Input/Output en anglais, ce qui se traduit par : Entrées / sorties générales.
+Ces broches constituent l'interface entre le Raspberry Pi et le monde extérieur. Une autre manière de voir les choses et de les considérer comme des interrupteurs que vous pouvez activer depuis le monde extérieur (ça, c'est les entrées), et des interrupteurs que le Pi peut activer depuis son monde informatique (ça, c'est les sorties). 
 
 One powerful feature of the Raspberry Pi is the row of GPIO pins along the top edge of the board. GPIO stands for General-Purpose Input/Output. These pins are a physical interface between the Raspberry Pi and the outside world. At the simplest level, you can think of them as switches that you can turn on or off (input) or that the Pi can turn on or off (output).
 
