@@ -28,6 +28,7 @@ Pour ce faire, il existe plein de possibilités, nous vous en proposons deux :
 Pour utiliser le module à ultrasons dans Python, vous avez besoin de savoir sur quelles broches du GPIO les connecteurs Echo et Trigger sont branchés.
 
 1. Ouvrez Python 3. 
+
 ![Naviguez dans le menu pour démarrer Python 3](images/python3-app-menu.png)
 
 1. Dans la console, tapez la ligne suivante pour importer la fonction `DistanceSensor` de la librairie GPIO Zero:
@@ -61,7 +62,7 @@ Pour utiliser le module à ultrasons dans Python, vous avez besoin de savoir sur
 
     La valeur devrait diminuer quand votre main s'approche. Pressez les touche **Ctrl + C** pour sortir de la boucle.
 
-## Intervalles
+## Portée et intervalles
 
 En plus des mesures de distance, il est possible de programmer votre capteur pour réagir lorsqu'un objet entre à portée.
 
