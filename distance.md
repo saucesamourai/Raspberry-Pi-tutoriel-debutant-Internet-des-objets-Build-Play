@@ -25,70 +25,72 @@ Pour ce faire, il existe plein de possibilités, nous vous en proposons deux :
 
 ## Code
 
-To use the ultrasonic distance sensor in Python, you need to know which GPIO pins the echo and trigger are connected to.
+Pour utiliser le module à ultrasons dans Python, vous avez besoin de savoir sur quelles broches du GPIO les connecteurs Echo et Trigger sont branchés.
 
-1. Open Python 3.
+1. Ouvrez Python 3. 
+![Naviguez dans le menu pour démarrer Python 3](images/python3-app-menu.png)
 
-1. In the shell, enter the following line to import `DistanceSensor` from the GPIO Zero library:
+1. Dans la console, tapez la ligne suivante pour importer la fonction `DistanceSensor` de la librairie GPIO Zero:
 
     ```python
     from gpiozero import DistanceSensor
     ```
 
-    After each line, press **Enter** and the command will be executed immediately.
+    Après chaque ligne de code, tapez **Entrée** et la ligne de commande sera exécutée.
 
-1. Create an instance of `DistanceSensor` using your echo and trigger pins:
+1. Lancez une première impulsion d'ultrasons en créant une instance de `DistanceSensor` avec des valeurs pour echo et trigger:
 
     ```python
     ultrasonic = DistanceSensor(echo=17, trigger=4)
     ```
 
-1. See what distance it shows:
+1. Observez la distance mesurée par le capteur:
 
     ```python
     ultrasonic.distance
     ```
 
-    You should see a number: this is the distance to the nearest object, in metres.
-
-1. Try using a loop to print the distance continuously, while waving your hand in front of the sensor to alter the distance reading:
+    Vous devriez voir un nombre. C'est la distance en mètres de l'objet le plus proche du capteur.
+    
+1. Nous allons maintenant utiliser une boucle infinie pour relancer des impulsions régulièrement. Passez votre main devant le capteur pour voir la distance mesurée évoluer:
 
     ```python
     while True:
         print(ultrasonic.distance)
     ```
 
-    The value should get smaller the closer your hand is to the sensor. Press **Ctrl + C** to exit the loop.
+    La valeur devrait diminuer quand votre main s'approche. Pressez les touche **Ctrl + C** pour sortir de la boucle.
 
-## Ranges
+## Intervalles
 
-As well as being able to see the distance value, you can also get the sensor to do things when the object is in or out of a certain range.
+En plus des mesures de distance, il est possible de programmer votre capteur pour réagir lorsqu'un objet entre à portée.
 
-1. Use a loop to print different messages when the sensor is in range or out of range:
-
+1. Utilisons une boucle While qui va afficher "Objet à portée" lorsqu'un objet passe suffisamment près, et "Objet hors de portée" lorsqu'il s'éloigne au delà de la zone détectable:
+    
     ```python
     while True:
         ultrasonic.wait_for_in_range()
-        print("In range")
+        print("Objet a portee")
         ultrasonic.wait_for_out_of_range()
-        print("Out of range")
+        print("Objet hors de portee")
     ```
+    Déplacez votre main devant le capteur. Il devrait alterner entre les messages "Objet à portée" et "Objet hors de portée" lorsque vous approchez et éloignez votre main. Amusez vous à trouver le point limite entre les deux zones.
+    
+1. La limite de portée par défaut est de 30cm, ou 0.3m. Celle valeur peut être modifiée au démarrage du capteur:
 
-    Now wave your hand in front of the sensor; it should switch between showing the message "In range" and "Out of range" as your hand gets closer and further away from the sensor. See if you can work out the point at which it changes.
-
-1. The default range threshold is 0.3m. This can be configured when the sensor is initiated:
+    Ici par exemple, on va indiquer une portée modifiée de 0.5m.
 
     ```python
     ultrasonic = DistanceSensor(echo=17, trigger=4, threshold_distance=0.5)
     ```
-
-    Alternatively, this can be changed after the sensor is created, by setting the `threshold_distance` property:
-
+    
+    Autrement, cette valeur peut être changée après la création du capteur, en utilisant l'attribut `threshold_distance`, de l'objet 'ultrasonic':
+   
     ```python
     ultrasonic.threshold_distance = 0.5
     ```
 
-1. Try the previous loop again and observe the new range threshold.
+1. Essayez la boucle précédente et observez le nouveau seuil de portée défini.
 
 1. The `wait_for` functions are **blocking**, which means they halt the program until they are triggered. Another way of doing something when the sensor goes in and out of range is to use `when` properties, which can be used to trigger actions in the background while other things are happening in the code.
 
