@@ -93,22 +93,24 @@ En plus des mesures de distance, il est possible de programmer votre capteur pou
 
 1. Essayez la boucle précédente et observez le nouveau seuil de portée défini.
 
-1. The `wait_for` functions are **blocking**, which means they halt the program until they are triggered. Another way of doing something when the sensor goes in and out of range is to use `when` properties, which can be used to trigger actions in the background while other things are happening in the code.
+1. Les fonctions de type 'wait_for' que nous allons voir maintenant (qu'on pourrait traduire 'attendre_que', en français) sont **bloquantes**, ce qui signifie qu'elles arrêtent le programme tant qu'elles ne sont pas déclenchées. Une autre façon de déclencher une action quand l'objet entre et sort de la portée du capteur est d'utiliser l'attribut 'when'. Ceci permet de déclencher automatiquement des actions en arrière plan, même lorsque le programme exécute d'autres lignes de code.
 
-    First, you need to create a function for what you want to happen when the sensor is in range:
 
+    Par exemple, vous allez creér une une fonction qui définit ce qui se passe quand un objet est à portée du capteur:
+    
     ```python
     def hello():
         print("Hello")
     ```
-
-    Then set `ultrasonic.when_in_range` to the name of this function:
-
+    Dans cette exemple, on affiche 'Hello'.
+    
+    Ensuite, on configure `ultrasonic.when_in_range` pour déclencher cette fonction.
+    
     ```python
     ultrasonic.when_in_range = hello
     ```
 
-1. Add another function for when the sensor goes out of range:
+1. On ajoute une autre fonction qui définit ce qui se passe quand l'objet passe hors de portée:
 
     ```python
     def bye():
@@ -116,28 +118,34 @@ En plus des mesures de distance, il est possible de programmer votre capteur pou
 
     ultrasonic.when_out_of_range = bye
     ```
+    Ici, on dit 'Bye'.
+    
+    Maintenant que ces déclenchements sont paramétrés, vous devriez voir "Hello" quand votre main est à portée, puis "Bye", quand votre main s'éloigne.
+    
+    
+1. Vous avez peut être remarqué que la distance mesurée plafonne à 1 mètre. Il s'agit de la valeur maximum définie par défaut, mais celle-ci peut être modifiée...
 
-    Now these triggers are set up, you'll see "hello" printed when your hand is in range, and "bye" when it's out of range.
 
-1. You may have noticed that the sensor distance stopped at 1 metre. This is the default maximum and can also be configured on setup:
+    grâce au paramètre 'max_distance' de la fonction DistanceSensor:
+
 
     ```python
     ultrasonic = DistanceSensor(echo=17, trigger=4, max_distance=2)
     ```
 
-    Or after setup:
+    où après initialisation de cette manière:
 
     ```python
     ultrasonic.max_distance = 2
     ```
 
-1. Try different values of `max_distance` and `threshold_distance`.
+1. Amusez vous à essayer différentes valeurs de `max_distance` (distance maximum) et `threshold_distance` (seuil de portée).
 
-## What next?
+## Que faire ensuite ?
 
-Now you've learned to use an ultrasonic distance sensor, you could:
+Maintenant que vous savez utiliser un module de mesure de distance, vous pourriez :
 
-- Build a proximity sensor alert using a buzzer or a sound file
-- Build a Pi camera photo booth which is activated when a person is close enough to the camera
-- Build a robot with a distance sensor to stop it bumping into other objects
-- Continue to the next worksheet on [analogue inputs](analogue.md)
+- Fabriquer un radar de recul avec un buzzer physique ou un fichier son  
+- Fabriquer un photomaton qui se déclenche automatiquement quand la personne est suffisamment proche de l'objectif
+- Construire un robot équipé d'un capteur de distance qui l'emêche de buter contre les murs et les objets
+
