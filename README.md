@@ -12,8 +12,10 @@ En quelques heures à peine, vous allez :
 * Fabriquer un détecteur de mouvement
 
 A l'issue de cette formation, vous aurez acquis des bases solides qui vous permettront d'attaquer des projets plus complexes :
-* Exemple1 
-* Exemple2
+* Un dispositif d'alerte qui vous avertit par SMS lorsqu'un individu ouvre votre frigo.
+* Un détecteur de parents infrarouge.
+* Un radar de recul pour automobile.
+* Et bien d'autres choses qui ne dépendent que de votre imagination !
 
 Voir notre liste des meilleurs projets pour progresser.
 
