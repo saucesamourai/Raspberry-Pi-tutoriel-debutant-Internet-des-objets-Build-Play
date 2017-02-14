@@ -1,12 +1,15 @@
-# Passive infrared motion sensor (PIR)
+# Utiliser un détecteur de mouvement infrarouge (en anglais, Passive infrared motion sensor ou PIR)
 
-Humans and other animals emit radiation all the time. This is nothing to be concerned about, though, as the type of radiation we emit is infrared radiation (IR), which is pretty harmless at the levels emitted by humans. In fact, all objects above absolute zero (-273.15C) emit IR radiation.
+Les humains et les animaux émettent des radiations en permanence. Rien de grave à cela cependant, car le type de radiation que nous émettons sont des rayonnements infrarouges inoffensifs aux niveau que nous émettons. En fait, tout objet dont la température est supérieur au zéro absolu (- 273,15 °C) émet un rayonnement infrarouge.
 
-A PIR sensor detects changes in the amount of IR radiation it receives. When there is a significant change in the amount of IR radiation it detects, then a pulse is triggered. This means that a PIR sensor can detect when a human (or any animal) moves in front of it.
+Le détecteur infrarouge (PIR) détecte les changements de rayonnement infrarouge qu'il reçoit. Lorsqu'un changement significatif de volume de radiation reçu est détecté, le capteur émet une impulsion électrique. Ceci signifie qu'un capteur PIR peut détecter le mouvement d'un humain ou d'un animal devant lui. 
 
 ![pir](images/pir_module.png)
 
-## Wiring a PIR sensor
+## Câbler un détecteur de mouvement infrarouge
+Lorsque le PIR détecte un mouvement, il émet une impulsion électrique mais trop faible pour être décelée. Elle doit donc être amplifiée. C'est pourquoi le PIR est alimenté.
+
+Si vous ne trouvez pas 
 
 The pulse emitted when a PIR detects motion needs to be amplified, and so it needs to be powered. There are three pins on the PIR; they should be labelled `Vcc`, `Gnd`, and `Out`. If these labels aren't clear, they are sometimes concealed beneath the Fresnel lens (the white cap), which you can temporarily remove to see the pin labels.
 
