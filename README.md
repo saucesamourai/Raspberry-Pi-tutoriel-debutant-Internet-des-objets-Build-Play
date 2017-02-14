@@ -17,7 +17,7 @@ A l'issue de cette formation, vous aurez acquis des bases solides qui vous perme
 * Un radar de recul pour automobile.
 * Et bien d'autres choses qui ne dépendent que de votre imagination !
 
-Voir notre liste des meilleurs projets pour progresser.
+Si vous êtes en manque d'idées, nous avons selectionné pour vous les meilleurs projets DIY pour aller plus loin.
 
 # Avez-vous tout le matériel nécessaire pour démarrer ?## Le raspberry pi
 
