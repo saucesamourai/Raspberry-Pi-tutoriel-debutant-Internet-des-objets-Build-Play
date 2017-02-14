@@ -1,22 +1,38 @@
-# Premiers pas dans l'univers de l'Internet des Objets avec le Raspberry Pi 3 et Python
+# Vos premiers pas dans l'univers de l'Internet des Objets avec le Raspberry Pi 3 et Python
 
 ![Physical Computing with Python](cover.png)
 
 Le tutoriel original, Physical Computing with Python est un excellent tutoriel officiel de la fondation Raspberry Pi.
-Nous l'avons traduit en français pour accompagner le kit de démarrage Build & Play, car nous l'avons trouvé imbattable sur le plan pédagogique. Aucun autre tutoriel disponible actuellement sur la toile ne nous a fait autant progresser en partant de zéro.
+Nous l'avons traduit en français car nous l'avons trouvé imbattable sur le plan pédagogique. Aucun autre tutoriel disponible actuellement sur la toile ne nous a fait autant progresser en partant de zéro.
+Dans ce tutorial, vous apprendrez à utiliser les broches GPIO de votre Raspberry Pi pour l'interfacer avec des composants électroniques comme des LED ou des détecteurs de mouvement.
 
-Dans ce projet, vous apprendrez à utiliser les broches GPIO 
+En quelques heures à peine, vous allez :
+* Faire clignoter des LED
+* Créer un détecteur de distance
+* Fabriquer un détecteur de mouvement
 
-In this resource you will learn how to use the GPIO pins on your Raspberry Pi to interface with electronic components, such as LEDs and PIRs.
+A l'issue de cette formation, vous aurez acquis des bases solides qui vous permettront d'attaquer des projets plus complexes :
+* Exemple1 
+* Exemple2
 
-# Contents
+Voir notre liste des meilleurs projets pour progresser.
 
-- [Getting started](worksheet.md)
-- [Using an active buzzer](buzzer.md)
-- [Making traffic lights](trafficlights.md)
-- [Using a light-dependent resistor](ldr.md)
-- [Using a PIR Sensor](pir.md)
-- [Using an ultrasonic distance sensor](distance.md)
+# Avez-vous tout le matériel nécessaire pour démarrer ?## Le raspberry pi
+
+Les éléments suivants
+
+### Les indispensables
+Avant de commencer, assurez-vous d'avoir tout le matériel nécessaire pour faire fonctionner votre Raspberry Pi en suivant notre guide de démarrage rapide. 
+
+## Les composants électroniques
+En plus de Raspberry Pi et de ses éléments auxiliaires, nous allons avoir besoin de plusieurs composants électroniques pour nos montages, que vous trouverez dans la liste de composants.
+Si vous n'avez rien de tout ça, nous avons conçu le kit de démarrage "Internet des objets" Build & Play pour vous simplifier la vie, qui contient tous les composants nécessaires à un prix imbattable et qui peut être livré chez vous dès demain.
+
+
+# Sommaire 
+- [Premiers pas (avec des LED!)](worksheet.md)
+- [Utiliser un détecteur de mouvement infrarouge](pir.md)
+- [Utiliser un module de mesure de distance à ultrasons](distance.md)
 
 ## Licence
 
