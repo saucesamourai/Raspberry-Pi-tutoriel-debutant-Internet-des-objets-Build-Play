@@ -25,7 +25,8 @@ Si vous êtes en manque d'idées, nous avons selectionné pour vous les meilleur
 
 # Avez-vous tout le matériel nécessaire pour démarrer ?
 
-### Les indispensables
+## Le Raspberry Pi et ses auxiliaires
+Avez-vous un clavier ? un moniteur ? un adaptateur secteur micro USB ?..
 Avant de commencer, assurez-vous d'avoir tout le matériel nécessaire pour faire fonctionner votre Raspberry Pi en suivant notre [guide de démarrage rapide](https://github.com/saucesamourai/Demarrage-rapide-Raspberry-Pi/blob/master/README.md). 
 
 ## Les composants électroniques
