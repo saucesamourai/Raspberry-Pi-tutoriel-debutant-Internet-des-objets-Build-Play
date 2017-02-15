@@ -30,8 +30,8 @@ while True:
     if pir.motion_detected:
         print("Vous avez bougé!")
 ```
-    D'abord on importe la fonction MotionSensor, puis on crée la variable 'pir' avec cette fonction.
-    Ensuite on crée une boucle infinie pour afficher "Vous avez bougé!" dès qu'un mouvement est détecté
+D'abord on importe la fonction MotionSensor, puis on crée la variable 'pir' avec cette fonction.
+Ensuite on crée une boucle infinie pour afficher "Vous avez bougé!" dès qu'un mouvement est détecté
 
 ## What Next?
 
