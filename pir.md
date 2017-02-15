@@ -34,5 +34,6 @@ D'abord on importe la fonction MotionSensor, puis on crée la variable 'pir' ave
 Ensuite on crée une boucle infinie pour afficher "Vous avez bougé!" dès qu'un mouvement est détecté
 
 ## Que faire ensuite ?
-
+ Maintenant que vous savez détecter des mouvements
 - Passez au prochain exercice pour faire fonctionner le [module de mesure de distance à ultrasons](distance.md)
+- Créez un jeu "1, 2, 3, soleil !" complètement automatique.
