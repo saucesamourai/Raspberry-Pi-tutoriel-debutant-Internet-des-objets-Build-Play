@@ -33,7 +33,6 @@ while True:
 D'abord on importe la fonction MotionSensor, puis on crée la variable 'pir' avec cette fonction.
 Ensuite on crée une boucle infinie pour afficher "Vous avez bougé!" dès qu'un mouvement est détecté
 
-## What Next?
+## Que faire ensuite ?
 
-- Now you know how to use a PIR, why not have a go at building a [Parent Detector](https://www.raspberrypi.org/learning/parent-detector)
-- Continue to the next worksheet on using an [Ultrasonic Distance Sensor](distance.md)
+- Passez au prochain exercice pour faire fonctionner le [module de mesure de distance à ultrasons](distance.md)
