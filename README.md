@@ -23,12 +23,10 @@ A l'issue de cette formation, vous aurez acquis des bases solides qui vous perme
 
 Si vous êtes en manque d'idées, nous avons selectionné pour vous les meilleurs projets DIY pour aller plus loin.
 
-# Avez-vous tout le matériel nécessaire pour démarrer ?## Le raspberry pi
-
-Les éléments suivants
+# Avez-vous tout le matériel nécessaire pour démarrer ?
 
 ### Les indispensables
-Avant de commencer, assurez-vous d'avoir tout le matériel nécessaire pour faire fonctionner votre Raspberry Pi en suivant notre guide de démarrage rapide. 
+Avant de commencer, assurez-vous d'avoir tout le matériel nécessaire pour faire fonctionner votre Raspberry Pi en suivant notre [guide de démarrage rapide](https://github.com/saucesamourai/Demarrage-rapide-Raspberry-Pi). 
 
 ## Les composants électroniques
 En plus de Raspberry Pi et de ses éléments auxiliaires, nous allons avoir besoin de plusieurs composants électroniques pour nos montages, que vous trouverez dans la liste de composants.
