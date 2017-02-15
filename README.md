@@ -1,4 +1,4 @@
-![Build & Play, les meilleurs tutoriels DIY pour débuter et progresser dans l'univers de l'Internet des Objets](BuildnPlay.png)
+![Build & Play, les meilleurs tutoriels DIY pour débuter et progresser dans l'univers de l'Internet des Objets](BuildnPlay_small.png)
 
 # Vos premiers pas dans l'univers de l'Internet des Objets avec le Raspberry Pi 3 et Python
 
