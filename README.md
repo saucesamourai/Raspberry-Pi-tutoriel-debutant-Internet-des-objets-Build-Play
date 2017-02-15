@@ -1,8 +1,12 @@
+![Build & Play, les meilleurs tutoriels DIY pour débuter et progresser dans l'univers de l'Internet des Objets](BuildnPlay.png)
+
 # Vos premiers pas dans l'univers de l'Internet des Objets avec le Raspberry Pi 3 et Python
 
 ![Physical Computing with Python](cover.png)
 
-Le tutoriel original, Physical Computing with Python est un excellent tutoriel officiel de la fondation Raspberry Pi.
+Bienvenue !
+
+Ce tutoriel est basé sur l'excellent tutoriel officiel "Physical Computing with Python" de la fondation Raspberry Pi.
 Nous l'avons traduit en français car nous l'avons trouvé imbattable sur le plan pédagogique. Aucun autre tutoriel disponible actuellement sur la toile ne nous a fait autant progresser en partant de zéro.
 Dans ce tutorial, vous apprendrez à utiliser les broches GPIO de votre Raspberry Pi pour l'interfacer avec des composants électroniques comme des LED ou des détecteurs de mouvement.
 
