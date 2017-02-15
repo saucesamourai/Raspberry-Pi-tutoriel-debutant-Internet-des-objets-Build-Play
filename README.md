@@ -26,11 +26,11 @@ Si vous êtes en manque d'idées, nous avons selectionné pour vous les meilleur
 # Avez-vous tout le matériel nécessaire pour démarrer ?
 
 ### Les indispensables
-Avant de commencer, assurez-vous d'avoir tout le matériel nécessaire pour faire fonctionner votre Raspberry Pi en suivant notre [guide de démarrage rapide](https://github.com/saucesamourai/Demarrage-rapide-Raspberry-Pi). 
+Avant de commencer, assurez-vous d'avoir tout le matériel nécessaire pour faire fonctionner votre Raspberry Pi en suivant notre [guide de démarrage rapide](https://github.com/saucesamourai/Demarrage-rapide-Raspberry-Pi/blob/master/README.md). 
 
 ## Les composants électroniques
-En plus de Raspberry Pi et de ses éléments auxiliaires, nous allons avoir besoin de plusieurs composants électroniques pour nos montages, que vous trouverez dans la liste de composants.
-Si vous n'avez rien de tout ça, nous avons conçu le kit de démarrage "Internet des objets" Build & Play pour vous simplifier la vie, qui contient tous les composants nécessaires à un prix imbattable et qui peut être livré chez vous dès demain.
+En plus de Raspberry Pi et de ses éléments auxiliaires, nous allons avoir besoin de plusieurs éléments électroniques pour nos montages, que vous trouverez dans la liste de composants. [LIEN]
+Si vous n'avez rien de tout ça, nous avons conçu le  [kit de démarrage "Internet des objets" Build & Play](https://www.amazon.fr/dp/B01N0TKCJN) pour vous simplifier la vie, qui contient tous les composants nécessaires à un prix imbattable et qui peut être livré chez vous dès demain.
 
 
 # Sommaire 
