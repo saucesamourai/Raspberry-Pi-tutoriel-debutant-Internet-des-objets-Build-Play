@@ -7,21 +7,19 @@ Le détecteur infrarouge (PIR) détecte les changements de rayonnement infraroug
 ![pir](images/pir_module.png)
 
 ## Câbler un détecteur de mouvement infrarouge
-Lorsque le PIR détecte un mouvement, il émet une impulsion électrique mais trop faible pour être décelée. Elle doit donc être amplifiée. C'est pourquoi le PIR est alimenté.
+Lorsque le PIR détecte un mouvement, il émet une impulsion électrique mais trop faible pour être décelée. Elle doit donc être amplifiée. C'est pourquoi le PIR est alimenté. Son alimentation électrique se fait via les broches 'Vcc' et 'Gnd'. La broche 'Out' est celle qui va renvoyer l'information lorsqu'un mouvement est détecté.
 
-Si vous ne trouvez pas 
-
-The pulse emitted when a PIR detects motion needs to be amplified, and so it needs to be powered. There are three pins on the PIR; they should be labelled `Vcc`, `Gnd`, and `Out`. If these labels aren't clear, they are sometimes concealed beneath the Fresnel lens (the white cap), which you can temporarily remove to see the pin labels.
+Si vous n'arrivez pas à trouver les inscriptions des noms des broches 'Vcc', 'Gnd' et 'Out', c'est qu'ils sont probablement cachés sous la lentille de Fresnel (le capot en plastique blanc). Vous pouvez le déclipser en tirant dessus le temps de faire vos branchements.
 
 ![wiring](images/pir_wiring.png)
 
-1. As shown above, the `Vcc` pin needs attaching to a `5V` pin on the Raspberry Pi.
-1. The `Gnd` pin on the PIR sensor can be attached to *any* ground pin on the Raspberry Pi.
-1. Lastly, the `Out` pin needs to be connected to any of the GPIO pins.
+1. La broche 'Vcc' doit être reliée au '5V' du Raspberry Pi.
+1. La broche 'Gnd', "masse" en français, doit être reliée à n'importe quelle broche 'GND' du Raspberry Pi.
+1. Enfin, la broche `Out`, "sortie" en français, doit être connecté à n'importe quelle broche GPIO.
 
-## Detecting motion
+## Detecter les mouvements
 
-You can detect motion with the PIR using the code below:
+Vous pouvez détecter les mouvements en utilisant le PIR avec le code ci-dessous:
 
 ```python
 from gpiozero import MotionSensor
@@ -30,8 +28,10 @@ pir = MotionSensor(4)
 
 while True:
     if pir.motion_detected:
-        print("You moved")
+        print("Vous avez bougé!")
 ```
+    D'abord on importe la fonction MotionSensor, puis on crée la variable 'pir' avec cette fonction.
+    Ensuite on crée une boucle infinie pour afficher "Vous avez bougé!" dès qu'un mouvement est détecté
 
 ## What Next?
 
