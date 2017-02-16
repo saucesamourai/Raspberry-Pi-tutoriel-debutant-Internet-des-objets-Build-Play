@@ -1,23 +1,17 @@
-# Getting started with physical computing
 # Premiers pas dans l'univers de l'Internet des Objets
 
 ## GPIO pins
 ## Les broches GPIO
 
-Une des caractéristiques puissantes du Raspberry Pi, c'est sa rangée broches GPIO au bord de la carte. GPIO signifique General-Purpose Input/Output en anglais, ce qui se traduit par : Entrées / sorties générales.
-Ces broches constituent l'interface entre le Raspberry Pi et le monde extérieur. Une autre manière de voir les choses et de les considérer comme des interrupteurs que vous pouvez activer depuis le monde extérieur (ça, c'est les entrées), et des interrupteurs que le Pi peut activer depuis son monde informatique (ça, c'est les sorties). 
-
-One powerful feature of the Raspberry Pi is the row of GPIO pins along the top edge of the board. GPIO stands for General-Purpose Input/Output. These pins are a physical interface between the Raspberry Pi and the outside world. At the simplest level, you can think of them as switches that you can turn on or off (input) or that the Pi can turn on or off (output).
-
-The GPIO pins allow the Raspberry Pi to control and monitor the outside world by being connected to electronic circuits. The Pi is able to control LEDs, turning them on or off, run motors, and many other things. It's also able to detect whether a switch has been pressed, the temperature, and light. We refer to this as physical computing.
-
-There are 40 pins on the Raspberry Pi (26 pins on early models), and they provide various different functions.
-
-If you have a RasPiO pin label, it can help to identify what each pin is used for. Make sure your pin label is placed with the keyring hole facing the USB ports, pointed outwards.
+La broche GPIO (General-Purpose Input/Output, ou en français Entrées / Sorties) constitue l’un des principaux éléments du Raspberry Pi. Interface entre le Raspberry Pi et le monde extérieur, cette broche permet de prendre contrôler les actionneurs connectés au Raspberry Pi et de collecter les informations que vous souhaitez récupérer. A titre d’exemple, le Raspberry Pi peut allumer des LEDs, les éteindre, détecter si un interrupteur a été pressé, de mesurer la température, et la liste est longue! Cela s’appelle du Physical Computing!
+Le Raspberry compte 40 entrées/sorties delivrant de nombreuses fonctionnalités.
+Si vous disposez d’un “RasPio Label” (étiquette avec le nom de chaque entrées/sorties), cela peut vous permettre d’identifier plus rapidement les différents entrées/sorties et d’éviter de les confondre dans le futur. Lorsque vous installez votre étiquette, veillez à bien placer le trou jaune face aux ports USB, pointant vers l'extérieur.
 
 ![](images/raspio-ports.jpg)
 
-If you don't have a pin label, then this guide can help you to identify the pin numbers:
+Si vous n’avez pas d’étiquette, ne vous inquiétez pas. Ce schéma peut vous aider à vous y retrouver et à les identifier correctement.
+
+Vous pouvez remarquer différents types de label: 3V3, 5V, GND, GP2, etc. Vous trouvez dans la table ci-dessous leur description respectives:
 
 ![](images/pinout.png)
 
@@ -25,68 +19,72 @@ You'll see pins labelled as 3V3, 5V, GND and GP2, GP3, etc:
 
 |   |   |   |
 |---|---|---|
-| 3V3 | 3.3 volts | Anything connected to these pins will always get 3.3V of power |
-| 5V | 5 volts | Anything connected to these pins will always get 5V of power |
-| GND | ground | Zero volts, used to complete a circuit |
-| GP2 | GPIO pin 2 | These pins are for general-purpose use and can be configured as input or output pins |
-| ID_SC/ID_SD/DNC | Special purpose pins ||
+| 3V3 | 3.3 volts | Tout élément connecté à cette broche recevra une tension de 3,3V
+ |
+| 5V | 5 volts | Tout élément connecté à cette broche recevra une tension de 5V |
+| GND | ground | Tension nulle permettant de boucler un circuit |
+| GP2 | GPIO pin 2 | Ces broches sont les entrées/sorties classiques, configurables et contrôlable par le Raspberry Pi |
+| ID_SC/ID_SD/DNC | Broches spéciales ||
 
-**WARNING**: If you follow the instructions, then playing about with the GPIO pins is safe and fun. Randomly plugging wires and power sources into your Pi, however, may destroy it, especially if using the 5V pins. Bad things can also happen if you try to connect things to your Pi that use a lot of power; LEDs are fine, motors are not. If you're worried about this, then you might want to consider using an add-on board such as the [Explorer HAT](https://shop.pimoroni.com/products/explorer-hat) until you're confident enough to use the GPIO directly.
+**ATTENTION**: en suivant les instructions de ce tutorial, vous limiterez les risques d’endommagement de votre Raspberry. Veillez à ne pas brancher au hasard des éléments sur des broches sans avoir vérifié au préalable leur compatibilité. En particulier, les broches 5V sont dangereuses pour vos composants. Inversement, il faut prendre des précautions lorsque vous connectez des composants de forte puissance sur le Raspberry Pi. Les LED ne posent pas de problèmes, mais les moteurs peuvent endommager votre carte.
 
-## Lighting an LED
 
-LEDs are delicate little things. If you put too much current through them they will pop (sometimes quite spectacularly). To limit the current going through the LED, you should always use a resistor in series with it.
+## Allumer une LED
 
-Try connecting the long leg of an LED to the Pi's 3V3 and the short leg to a GND pin. The resistor can be anything over about 50Ω.
+Les LED sont des objets fragiles. Il faut faire attention et ne pas laisser un courant trop élevé les traverser - sous peine de voire la LED explosée sous vos yeux. Afin de limiter l’injection de courant, il faudra utiliser une résistance en série.
+Connectez une patte de la LED à la sortie 3,3V via une résistance de plus de 50Ω et l’autre à la sortie GND. Si vous avez acheté le [kit d'apprentissage Build & Play](https://www.amazon.fr/dp/B01N0TKCJN)
+, vous pouvez choisir n'importe laquelle des LED avec n'importe laquelle des résistances de 100Ω fournies.
 
 ![](images/led-3v3.png)
 
-The LED should light up. It will always be on, because it's connected to a 3V3 pin, which is itself always on.
+La LED devrait s’allumer et rester dans cet état, étant connectée à une tension constante de 3.3V
 
-Now try moving it from 3V3 to GPIO pin 17:
 
 ![](images/led-gpio17.png)
 
-The LED should now turn off, but now it's on a GPIO pin, and can therefore be controlled by code.
+La LED devrait s’éteindre. Elle est maintenant connectée à une GPIO et peut donc être contrôlée depuis votre Raspberry Pi.
 
-## Switching an LED on and off
+## Allumer et éteindre une LED depuis le Raspberry Pi
 
-GPIO Zero is a new Python library which provides a simple interface to everyday GPIO components. It comes installed by default in Raspbian.
+GPIO Zero est une nouvelle librairie Python permettant de dialoguer avec les GPIOs du Raspberry Pi. Cette librairie est installée par défaut avec Raspbian. 
 
-1. Open IDLE from the main menu (`Menu`>`Programming`>`Python 3 (IDLE)`.
+1. Ouvrer votre IDLE du menu principal (Menu > Programming > Python 3 (IDLE)).
 
-1. You can switch an LED on and off by typing commands directly into the Python interpreter window (also known as the Python **shell**). Let's do this by first importing the GPIO Zero library. You also need to tell the Pi which GPIO pin you are using - in this case pin 17. Next to the chevrons `>>>`, type:
+
+![Naviguez dans le menu pour démarrer Python 3](images/python3-app-menu.png)
+
+1. Vous pouvez maintenant contrôler votre LED en tapant des commandes directement depuis votre interpréteur. Dans un premier temps, importons la librairie. Il va être aussi nécessaire de déclarer à votre Raspberry Pi quelle GPIO vous souhaitez piloter. En loccurence, c'est la broche 17 qui nous intéresse. À côté des chevrons `>>>`, tapez :
 
 	```python
 	from gpiozero import LED
 	led = LED(17)
 
 	```
-	Press **Enter** on the keyboard.
+	Appuyez sur **Entrée** sur votre clavier pour exécuter la ligne de commande.
 
-1. To make the LED switch on, type the following and press **Enter**:
+1. Pour allumer la LED, taper le code suivant et appuyer sur **Entrée**:
 
 	```python
 	led.on()
 	```
 
-1. To make it switch off you can type:
+1. Afin de l'éteindre, vous pouvez taper :
 
 	```python
 	led.off()
 	```
 
-1. Your LED should switch on and then off again. But that's not all you can do.
+1. Votre LED devrait s'allumer puis s'étindre. Mais c'est loin d'être fini!
 
-## Flashing an LED
+## Faire clignoter une LED
 
-With the help of the `time` library and a little loop, you can make the LED flash.	
+A l'aide de la librairie `time` et d'une petite boucle, vous allez faire scintiller votre LED.	
 
-1. Create a new file by clicking **File > New file**.
+1. Créez un nouveau fichier en cliquant sur **Fichier > Nouveau**.
 
-1. Save the new file by clicking **File > Save**. Save the file as `gpio_led.py`.
+1. Enregistrez votre fichier en cliquant sur **Fichier > Enregistrer **. Enregistrer le fichier sous le nom `gpio_led.py`.
 
-1. Enter the following code to get started:
+1. Entrez ce code pour commencer:
 
     ```python
     from gpiozero import LED
@@ -101,9 +99,9 @@ With the help of the `time` library and a little loop, you can make the LED flas
         sleep(1)
     ```
 
-1. Save with **Ctrl + S** and run the code with **F5**.
+1. Enregistrer tout en faisant **Ctrl + S** et exécutez le code en pressant la touche **F5**.
 
-1. The LED should be flashing on and off. To exit the program press **Ctrl + C** on your keyboard.
+1. La LED devrait maintenant clignoter. Pour quitter le programme, pressez **Ctrl + C** sur votre clavier.
 
 ## Using buttons to get input
 
