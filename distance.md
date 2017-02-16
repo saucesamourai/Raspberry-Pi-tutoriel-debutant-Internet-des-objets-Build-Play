@@ -21,7 +21,7 @@ Pour ce faire, il existe plein de possibilités, nous vous en proposons deux :
 * Utiliser trois résistances de 100Ω. C'est celle que vous préferez si vous utilisez le kit Build & Play. Dans ce cas, vous adapterez le schéma représenté ci-dessous. Pour obtenir la tension désirée de 3.3V, il faut deux résistances de 100Ω connectées en série entre le port GPIO et la masse, et une résistance de 100Ω connectée entre la borne Echo et le GPIO.
 
 
-![wiring](images/wiring-uds.png)
+![schéma de montage](images/wiring-uds.png)
 
 ## Code
 
