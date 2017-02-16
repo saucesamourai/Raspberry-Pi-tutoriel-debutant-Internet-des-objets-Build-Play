@@ -1,7 +1,6 @@
 # Premiers pas dans l'univers de l'Internet des Objets
 
-## GPIO pins
-## Les broches GPIO
+## Les broches GPIO 
 
 La broche GPIO (General-Purpose Input/Output, ou en français Entrées / Sorties) constitue l’un des principaux éléments du Raspberry Pi. Interface entre le Raspberry Pi et le monde extérieur, cette broche permet de prendre contrôler les actionneurs connectés au Raspberry Pi et de collecter les informations que vous souhaitez récupérer. A titre d’exemple, le Raspberry Pi peut allumer des LEDs, les éteindre, détecter si un interrupteur a été pressé, de mesurer la température, et la liste est longue! Cela s’appelle du Physical Computing!
 Le Raspberry compte 40 entrées/sorties delivrant de nombreuses fonctionnalités.
