@@ -4,7 +4,8 @@
 
 La broche GPIO (General-Purpose Input/Output, ou en français Entrées / Sorties) constitue l’un des principaux éléments du Raspberry Pi. Interface entre le Raspberry Pi et le monde extérieur, cette broche permet de prendre contrôler les actionneurs connectés au Raspberry Pi et de collecter les informations que vous souhaitez récupérer. A titre d’exemple, le Raspberry Pi peut allumer des LEDs, les éteindre, détecter si un interrupteur a été pressé, de mesurer la température, et la liste est longue! Cela s’appelle du Physical Computing!
 Le Raspberry compte 40 entrées/sorties delivrant de nombreuses fonctionnalités.
-Si vous disposez d’un “RasPio Label” (étiquette avec le nom de chaque entrées/sorties), cela peut vous permettre d’identifier plus rapidement les différents entrées/sorties et d’éviter de les confondre dans le futur. Lorsque vous installez votre étiquette, veillez à bien placer le trou jaune face aux ports USB, pointant vers l'extérieur.
+Si vous disposez d’un <a rel="nofollow" href="https://www.amazon.fr/gp/product/B01DRO5QHC/ref=as_li_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=B01DRO5QHC&linkCode=as2&tag=curioschron01-21">["RaspIO Label"]</a><img src="http://ir-fr.amazon-adsystem.com/e/ir?t=curioschron01-21&l=as2&o=8&a=B01DRO5QHC" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+ (étiquette avec le nom de chaque entrées/sorties), cela peut vous permettre d’identifier plus rapidement les différents entrées/sorties et d’éviter de les confondre dans le futur. Lorsque vous installez votre étiquette, veillez à bien placer le trou jaune face aux ports USB, pointant vers l'extérieur.
 
 ![](images/raspio-ports.jpg)
 
