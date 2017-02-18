@@ -1,6 +1,9 @@
 As well as a Raspberry Pi with an SD card and the usual peripherals, you'll also need:
 
 
+![Breadboard](/images/breadboard.png = 200 x 167)
+
+
 <ul class="hardware-items">
                     <li>
                 <a href="/physical-computing-guide/breadboard/"><img src="/images/breadboard.png" /></a>
