@@ -1,4 +1,4 @@
-# Licence
+## Licence
 
 Sauf exception mentionnée, tout le contenu de ce répertoire est couvert part la licence suivante:
 
