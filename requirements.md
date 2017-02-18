@@ -4,7 +4,7 @@ En plus de votre Raspberry Pi, de la carte SD et des périphériques usuels, il 
                     
                 <img src="/images/breadboard.png" width="20%" heigth ="20%"/>
                
-#1 x Plaquette de câblage (ou platine d'expérimention, breadboard en anglais)
+##1 x Plaquette de câblage (ou platine d'expérimention, breadboard en anglais)
             
                 <br>
                 <li>
