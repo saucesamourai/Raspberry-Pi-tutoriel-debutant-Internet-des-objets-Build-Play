@@ -19,8 +19,7 @@ You'll see pins labelled as 3V3, 5V, GND and GP2, GP3, etc:
 
 |   |   |   |
 |---|---|---|
-| 3V3 | 3.3 volts | Tout élément connecté à cette broche recevra une tension de 3,3V
- |
+| 3V3 | 3.3 volts | Tout élément connecté à cette broche recevra une tension de 3,3V|
 | 5V | 5 volts | Tout élément connecté à cette broche recevra une tension de 5V |
 | GND | ground | Tension nulle permettant de boucler un circuit |
 | GP2 | GPIO pin 2 | Ces broches sont les entrées/sorties classiques, configurables et contrôlable par le Raspberry Pi |
