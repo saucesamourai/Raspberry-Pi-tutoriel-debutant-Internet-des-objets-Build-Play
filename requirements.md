@@ -1,4 +1,4 @@
-![Build & Play](buildplay_small.png)
+![Build & Play](BuildnPlay_small.png)
 
 En plus de votre Raspberry Pi, de la carte SD et des périphériques usuels, il vous faudra les composants suivants:
 
