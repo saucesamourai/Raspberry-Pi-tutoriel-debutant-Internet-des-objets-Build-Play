@@ -1,9 +1,9 @@
 En plus de votre Raspberry Pi, de la carte SD et des périphériques usuels, il vous faudra les composants suivants:
 
-<ul class="hardware-items">
+<ul>
                     
                               
-<div class="detail">1 x Plaquette de câblage (ou platine d'expérimention, breadboard en anglais)</div>
+<div>1 x Plaquette de câblage (ou platine d'expérimention, breadboard en anglais)</div>
                 <img src="/images/breadboard.png" width="20%" heigth ="20%"/>
  
                 <br>
