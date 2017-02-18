@@ -24,8 +24,6 @@ A l'issue de cette formation, vous aurez acquis des bases solides qui vous perme
 * Un radar de recul pour automobile.
 * Et bien d'autres choses qui ne dépendent que de votre imagination !
 
-Si vous êtes en manque d'idées, nous avons selectionné pour vous les meilleurs projets DIY pour aller plus loin.
-
 # Avez-vous tout le matériel nécessaire pour démarrer ?
 
 ## Le Raspberry Pi et ses auxiliaires
@@ -33,7 +31,7 @@ Avez-vous un clavier ? un moniteur ? un adaptateur secteur micro USB ?..
 Avant de commencer, assurez-vous d'avoir tout le matériel nécessaire pour faire fonctionner votre Raspberry Pi en suivant notre [guide de démarrage rapide](https://github.com/saucesamourai/Demarrage-rapide-Raspberry-Pi/blob/master/README.md). 
 
 ## Les composants électroniques
-En plus de Raspberry Pi et de ses éléments auxiliaires, nous allons avoir besoin de plusieurs éléments électroniques pour nos montages, que vous trouverez dans la liste de composants. [LIEN]
+En plus de Raspberry Pi et de ses éléments auxiliaires, nous allons avoir besoin de plusieurs éléments électroniques pour nos montages, que vous trouverez dans la [liste de composants](https://www.raspberrypi.org/learning/physical-computing-guide/requirements/).
 Si vous n'avez rien de tout ça, nous avons conçu le  [kit de démarrage "Internet des objets" Build & Play](https://www.amazon.fr/dp/B01N0TKCJN) pour vous simplifier la vie, qui contient tous les composants nécessaires à un prix imbattable et qui peut être livré chez vous dès demain.
 
 
@@ -42,12 +40,16 @@ Si vous n'avez rien de tout ça, nous avons conçu le  [kit de démarrage "Inter
 - [Utiliser un détecteur de mouvement infrarouge](pir.md)
 - [Utiliser un module de mesure de distance à ultrasons](distance.md)
 
-## Licence
+# Licence
 
-Unless otherwise specified, everything in this repository is covered by the following licence:
+Sauf exception mentionnée, tout le contenu de ce répertoire est couvert part la licence suivante:
 
 [![Creative Commons License](http://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 ***Physical Computing with Python*** by the [Raspberry Pi Foundation](http://www.raspberrypi.org) is licenced under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
-Based on a work at https://github.com/raspberrypilearning/physical-computing-with-python
+Basé sur les tutoriels officiels de la fondation Raspberry Pi, traduit et enrichi par Build & Play 
+https://github.com/raspberrypilearning/physical-computing-with-python
+https://github.com/saucesamourai/Raspberry-Pi-tutoriel-debutant-Internet-des-objets-Build-Play
+
+Tools graphic by Freepik from Flaticon is licensed under Creative Commons BY 3.0. Made with Logo Maker
