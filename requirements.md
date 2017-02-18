@@ -1,3 +1,5 @@
+![Build & Play](buildplay_small.png)
+
 En plus de votre Raspberry Pi, de la carte SD et des périphériques usuels, il vous faudra les composants suivants:
 
 Si vous n'avez aucun composant, ne perdez pas de temps et choisissez [notre kit de démarrage complet et économique](https://www.amazon.fr/dp/B01N0TKCJN). Sinon, nous avons fait ci-après une sélection de produits de bonne qualité et compatibles avec les projets que nous proposons.
