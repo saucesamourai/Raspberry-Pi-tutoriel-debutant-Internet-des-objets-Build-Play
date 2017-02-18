@@ -35,7 +35,7 @@ Si vous n'avez aucun composant, ne perdez pas de temps et choisissez [notre kit 
 
 
 ## 2 câbles mâle - femelle / 2 câbles mâle - mâle / 2 câbles femelle - femelle 
-<img src="/images/jumper-male-to-female.png"  width="20%" heigth ="20%"/>
+<img src="/images/jumper-male-to-female.png" width="20%" heigth ="20%"/>
 <img src="/images/jumper-female-to-female.png" width="20%" heigth ="20%"/>
 <img src="/images/jumper-male-to-male.png"  width="20%" heigth ="20%"/>
 * <a rel="nofollow" href="https://www.amazon.fr/gp/product/B01J7K6HK0/ref=as_li_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=B01J7K6HK0&linkCode=as2&tag=curioschron01-21">Un assortiment de 120 câbles pour moins de 10 € et une livraison rapide</a><img src="http://ir-fr.amazon-adsystem.com/e/ir?t=curioschron01-21&l=as2&o=8&a=B01J7K6HK0" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
