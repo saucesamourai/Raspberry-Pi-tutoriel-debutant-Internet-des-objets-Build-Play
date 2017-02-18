@@ -4,10 +4,9 @@ En plus de votre Raspberry Pi, de la carte SD et des périphériques usuels, il 
                     
                               
 <div>1 x Plaquette de câblage (ou platine d'expérimention, breadboard en anglais)</div>
-                <img src="/images/breadboard.png" width="20%" heigth ="20%"/>
+<img src="/images/breadboard.png" width="20%" heigth ="20%"/>
  
-                
-                <ul>
+<ul>
                 <li>
                 <a rel="nofollow" href="https://www.amazon.fr/gp/product/B00JGFDKBQ/ref=as_li_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=B00JGFDKBQ&linkCode=as2&tag=curioschron01-21">Une première solution correcte à moins de 2€ si vous pouvez attendre une quinzaine de jours pour la livraison</a><img src="http://ir-fr.amazon-adsystem.com/e/ir?t=curioschron01-21&l=as2&o=8&a=B00JGFDKBQ" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
                 </li>
