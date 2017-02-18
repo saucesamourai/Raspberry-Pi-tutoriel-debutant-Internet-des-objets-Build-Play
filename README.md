@@ -6,9 +6,12 @@
 
 Bienvenue !
 
+
+Hello English-speaking friend, click [here](english.md) to get started !
+
 Ce tutoriel est basé sur l'excellent tutoriel officiel "Physical Computing with Python" de la fondation Raspberry Pi.
 Nous l'avons traduit en français car nous l'avons trouvé imbattable sur le plan pédagogique. Aucun autre tutoriel disponible actuellement sur la toile ne nous a fait autant progresser en partant de zéro.
-Dans ce tutorial, vous apprendrez à utiliser les broches GPIO de votre Raspberry Pi pour l'interfacer avec des composants électroniques comme des LED ou des détecteurs de mouvement.
+Dans cette formation, vous apprendrez à utiliser les broches GPIO de votre Raspberry Pi pour l'interfacer avec des composants électroniques comme des LED ou des détecteurs de mouvement.
 
 En quelques heures à peine, vous allez :
 * Faire clignoter des LED
