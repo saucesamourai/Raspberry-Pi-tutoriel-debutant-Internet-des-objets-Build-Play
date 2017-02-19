@@ -1,4 +1,4 @@
-# Premiers pas dans l'univers de l'Internet des Objets
+# Tutorial : premiers pas dans l'univers de l'Internet des Objets
 
 ## Les broches GPIO 
 
@@ -102,17 +102,30 @@ A l'aide de la librairie `time` et d'une petite boucle, vous allez faire scintil
 
 1. La LED devrait maintenant clignoter. Pour quitter le programme, pressez **Ctrl + C** sur votre clavier.
 
-## Using buttons to get input
+## Utiliser un bouton poussoir en entrée
 
-Now you're able to control an output component (an LED), let's connect and control an input component: a button. 
+Maintenant que vous êtes capable de contrôler une LED, essayons de connecter et contrôler un bouton poussoir.
+Créer un nouveau fichier en cliquant sur File > New file.
+Sauvegarder le fichier en cliquant sur File > Save. Sauvegarder le fichier en tant que gpio_button.py.
+Cette fois, nous aurons besoin de la classe Button et de déclarer que nous allons contrôler la broche 2.
+Taper le code suivant dans votre fichier:
+from gpiozero import Button
+button = Button(2)
+Maintenant vous pouvez déclencher une action lorsque le bouton est pressé:
+button.wait_for_press()
+print('You pushed me')
+Sauvegarder en appuyant sur Ctrl + S et compiler votre code en tapant sur F5
+Appuyer sur le bouton et votre texte apparaîtra.
 
-1. Connect a button to another GND pin and GPIO pin 2, like this:
+
+
+1. Connectez un bouton à n'importe quelle autre broche GND et à la broche GPIO 2, comme ci-dessous: 
 
     ![](images/button.png)
 
-1. Create a new file by clicking **File > New file**.
+1. Créez un nouveau fichier en cliquant sur **File > New file**.
 
-1. Save the new file by clicking **File > Save**. Save the file as `gpio_button.py`.
+1. Sauvergardez le fichier en cliquant sur **File > Save**. Enregistrer le fichier sous le nom `gpio_bouton.py`.
 
 1. This time you'll need the `Button` class, and to tell it that the button is on pin 2. Write the following code in your new file:
 
@@ -130,7 +143,9 @@ Now you're able to control an output component (an LED), let's connect and contr
 1. Save with **Ctrl + S** and run the code with **F5**. 
 1. Press the button and your text will appear. 
 
-## Manually controlling the LED
+## Contrôler une LED manuellement avec un bouton poussoir
+
+Vous pouvez maintenant combiner les deux programmes.
 
 You can now combine your two programs written so far to control the LED using the button.
 
