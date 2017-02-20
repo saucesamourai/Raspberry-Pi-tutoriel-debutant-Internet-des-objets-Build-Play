@@ -1,8 +1,9 @@
-# Utiliser un détecteur de mouvement infrarouge (en anglais, Passive infrared motion sensor ou PIR)
+![Build & Play, les meilleurs tutoriels DIY pour débuter et progresser dans l'univers de l'Internet des Objets](BuildnPlay_small.png)
 
+# Utiliser un détecteur de mouvement infrarouge 
 Les humains et les animaux émettent des radiations en permanence. Rien de grave à cela cependant, car le type de radiation que nous émettons sont des rayonnements infrarouges inoffensifs aux niveau que nous émettons. En fait, tout objet dont la température est supérieur au zéro absolu (- 273,15 °C) émet un rayonnement infrarouge.
 
-Le détecteur infrarouge (PIR) détecte les changements de rayonnement infrarouge qu'il reçoit. Lorsqu'un changement significatif de volume de radiation reçu est détecté, le capteur émet une impulsion électrique. Ceci signifie qu'un capteur PIR peut détecter le mouvement d'un humain ou d'un animal devant lui. 
+Le détecteur infrarouge (en anglais, Passive infrared motion sensor ou PIR) détecte les changements de rayonnement infrarouge qu'il reçoit. Lorsqu'un changement significatif de volume de radiation reçu est détecté, le capteur émet une impulsion électrique. Ceci signifie qu'un capteur PIR peut détecter le mouvement d'un humain ou d'un animal devant lui. 
 
 ![pir](images/pir_module.png)
 
