@@ -1,3 +1,5 @@
+![Build & Play, les meilleurs tutoriels DIY pour débuter et progresser dans l'univers de l'Internet des Objets](BuildnPlay_small.png)
+
 # Tutorial : premiers pas dans l'univers de l'Internet des Objets
 
 ## Les broches GPIO 
@@ -212,7 +214,7 @@ En pressant une fois, la LED va s'allumer, et en pressant une seconde fois, la L
 
 1. Enregistrez et exécutez le programme. Appuyez sur le bouton et maintenez le enfoncé pour observer la LED s'éclairer.
 
-## Que faire enuite ?
+## Que faire ensuite ?
 
 Vous savez maintenant connecter des LED et des boutons à votre Raspberry Pi, et les programmer en Python. 
 L'univers des possibilités offertes par le Raspberry Pi est immense. Passez aux exercices suivants pour en découvrir comment utiliser différents types de détecteurs.
