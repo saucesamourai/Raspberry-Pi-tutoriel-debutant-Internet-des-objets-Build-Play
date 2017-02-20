@@ -1,3 +1,5 @@
+![Build & Play, les meilleurs tutoriels DIY pour débuter et progresser dans l'univers de l'Internet des Objets](BuildnPlay_small.png)
+
 # Mesurer des distances avec le module à ultrasons HC-SR04 
 
 Dans l'air, le son voyage à une vitesse de 343 mètres par seconde. Un capteur de distance envoie des impulsions d'ultrasons inaudibles par l'oreille humaine, et chronomètre le temps écoulé avant de recevoir l'écho généré par le rebond de l'onde sonore sur un objet proche. Il utilise ensuite la vitesse du son pour en déduire la distance de l'objet.
