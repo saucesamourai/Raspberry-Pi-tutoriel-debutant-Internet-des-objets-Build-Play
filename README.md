@@ -27,8 +27,8 @@ A l'issue de cette formation, vous aurez acquis des bases solides qui vous perme
 # Avez-vous tout le matériel nécessaire pour démarrer ?
 
 ## Le Raspberry Pi et ses auxiliaires
-Avez-vous un clavier ? un moniteur ? un adaptateur secteur micro USB ?..
-Avant de commencer, assurez-vous d'avoir tout le matériel nécessaire pour faire fonctionner votre Raspberry Pi en suivant notre [guide de démarrage rapide](https://github.com/saucesamourai/Demarrage-rapide-Raspberry-Pi/blob/master/README.md). 
+Avez-vous un clavier ? un moniteur ? un adaptateur secteur micro USB ?
+Avant de commencer, assurez-vous d'avoir tout le matériel nécessaire pour faire fonctionner votre Raspberry Pi en suivant notre [guide de démarrage rapide](https://github.com/saucesamourai/Demarrage-rapide-Raspberry-Pi/blob/master/quickstart.md). 
 
 ## Les composants électroniques
 En plus de Raspberry Pi et de ses éléments auxiliaires, nous allons avoir besoin de plusieurs éléments électroniques pour nos montages, que vous trouverez dans la [liste de composants](https://www.raspberrypi.org/learning/physical-computing-guide/requirements/).
