@@ -123,37 +123,38 @@ Appuyer sur le bouton et votre texte apparaîtra.
 
     ![](images/button.png)
 
-1. Créez un nouveau fichier en cliquant sur **File > New file**.
+1. Créez un nouveau fichier en cliquant sur **Fichier > Nouveau **.
 
-1. Sauvergardez le fichier en cliquant sur **File > Save**. Enregistrer le fichier sous le nom `gpio_bouton.py`.
+1. Sauvergardez le fichier en cliquant sur **Fichier > Enregistrer **. Enregistrer le fichier sous le nom `gpio_bouton.py`.
 
-1. This time you'll need the `Button` class, and to tell it that the button is on pin 2. Write the following code in your new file:
+1. Ici, nous allons avoir besoin de la classe d'objet 'Button' pour contrôler le bouton. Ensuite, nous devrons déclarer que le bouton est connecté à la broche GPIO 2. Voici le code à taper dans votre nouveau fichier:
+
 
 	```python
 	from gpiozero import Button
 	button = Button(2)
 	```
 
-1. Now you can get your program to do something when the button is pushed. Add these lines:
+1. Maintenance, vous pouvez programmer votre Raspberry à réaliser une action quand le bouton est pressé. Ajotuez ces lignes:
 
 	```python
 	button.wait_for_press()
-	print('You pushed me')
+	print('Tu m'as pressé!')
 	```
-1. Save with **Ctrl + S** and run the code with **F5**. 
-1. Press the button and your text will appear. 
+	On va afficher un message à chaque fois que le bouton est activé.
+	
+1. Enregistrez en pressant **Ctrl + S** et éxecutez le code en tapant **F5**. 
+1. Pressez le bouton et observez le message s'afficher. 
 
 ## Contrôler une LED manuellement avec un bouton poussoir
 
-Vous pouvez maintenant combiner les deux programmes.
+Vous pouvez maintenant combiner les deux programmes précedents pour allumer la LED en pressant le bouton.
 
-You can now combine your two programs written so far to control the LED using the button.
+1. Créez un nouveau fichier en cliquant sur **Fichier > Nouveau **.
 
-1. Create a new file by clicking **File > New file**.
+1. Sauvergardez le fichier en cliquant sur **Fichier > Enregistrer **. Enregistrer le fichier sous le nom `gpio_controle.py`.
 
-1. Save the new file by clicking **File > Save**. Save the file as `gpio_control.py`.
-
-1. Now write the following code:
+1. Tapez le code suivant:
 
     ```python
     from gpiozero import LED, Button
@@ -167,14 +168,17 @@ You can now combine your two programs written so far to control the LED using th
     sleep(3)
     led.off()
     ```
+	Ce code signifique que lorsque le bouton est pressé, on allume la LED pendant 3 secondes avant de l'éteindre.
 	
-1. Save and run your program. When you push the button the LED should come on for three seconds.
+1. Enregistrez et executez le programme. Pressez le bouton et observez la LED s'allumer.
+ 
 
-## Making a switch
+## Programmer le bouton en mode interrupteur
 
-With a switch, a single press and release on the button would turn the LED on, and another press and release would turn it off again.
+Maintenant, on veut que le programme réagisse différemment à la pression du bouton.
+En pressant une fois, la LED va s'allumer, et en pressant une seconde fois, la LED va s'éteindre.
 
-1. Modify your code so that it looks like this:
+1. Modifiez votre code de la manière suivante:
 
 	```python
 	from gpiozero import LED, Button
@@ -188,12 +192,11 @@ With a switch, a single press and release on the button would turn the LED on, a
 		led.toggle()
 	```
 
-    `led.toggle()` switches the state of the LED from on to off, or off to on. Since this happens in a loop the LED with turn on and off each time the button is pressed.
+    La fonction `led.toggle()` bascule l'état de la LED de 'ON' à 'OFF' ou inversement. 
+    
+1. Maintenant, on veut que la LED ne s'allume que lorsqu'on maintient le bouton enfoncé. C'est très facile avec GPIO Zero. Il existe deux méthodes (fonctions spécifiques) de l'objet 'Button', `when_pressed` et `when_released'. Ces fonctions ne bloquent pas l'exécution du programme, donc si elles sont placées dans une boucle, le programme continuera à tourner à l'infini.
 
-1. It would be great if you could make the LED switch on only when the button is being held down. With GPIO Zero, that's easy. There are two methods of the `Button` class called `when_pressed` and `when_released`. These don't block the flow of the program, so if they are placed in a loop, the program will continue to cycle indefinitely.
-
-1. Modify your code to look like this:
-
+1. Modifiez votre code de la manière suivante:
     ```python
     from gpiozero import LED, Button
     from signal import pause
@@ -207,16 +210,14 @@ With a switch, a single press and release on the button would turn the LED on, a
     pause()
     ```
 
-1. Save and run the program. Now when the button is pressed, the LED will light up. It will turn off again when the button is released.
+1. Enregistrez et exécutez le programme. Appuyez sur le bouton et maintenez le enfoncé pour observer la LED s'éclairer.
 
-## What next?
+## Que faire enuite ?
 
-There are lots of other things you can control or monitor with your Raspberry Pi. Have a look at the worksheets below, to see how easily this can be done.
+Vous savez maintenant connecter des LED et des boutons à votre Raspberry Pi, et les programmer en Python. 
+L'univers des possibilités offertes par le Raspberry Pi est immense. Passez aux exercices suivants pour en découvrir comment utiliser différents types de détecteurs.
 
-- [Using an active buzzer](buzzer.md)  
-- [Making traffic lights](trafficlights.md)  
-- [Using a light-dependent resistor](ldr.md)  
-- [Using a PIR Sensor](pir.md)  
-- [Using an ultrasonic distance sensor](distance.md)
-- [Analogue inputs](analogue.md)
-- [Using motors](motors.md)
+
+- [Utiliser un détecteur de mouvement infrarouge PIR](pir.md)  
+- [Utiliser un module de mesure de distance à ultrasons HC-SR04](distance.md)
+
