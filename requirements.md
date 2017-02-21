@@ -23,18 +23,18 @@ Si vous n'avez aucun composant, ne perdez pas de temps et choisissez [notre kit 
 * <a rel="nofollow" href="https://www.amazon.fr/gp/product/B00Q6OJ8AC/ref=as_li_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=B00Q6OJ8AC&linkCode=as2&tag=curioschron01-21">Un lot de 5 modules pour 9€, livraison rapide</a><img src="http://ir-fr.amazon-adsystem.com/e/ir?t=curioschron01-21&l=as2&o=8&a=B00Q6OJ8AC" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 
-## 1 LED
+## 1 x LED
 <img src="/images/led.png"  width="20%" heigth ="20%"/>
 * <a rel="nofollow" href="https://www.amazon.fr/gp/product/B00E34MNYU/ref=as_li_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=B00E34MNYU&linkCode=as2&tag=curioschron01-21">75 diodes électroluminescentes pour un peu plus d'1€, mais délai de livraison d'au moins quinze jours</a><img src="http://ir-fr.amazon-adsystem.com/e/ir?t=curioschron01-21&l=as2&o=8&a=B00E34MNYU" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 * <a rel="nofollow" href="https://www.amazon.fr/gp/product/B01FUP47YE/ref=as_li_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=B01FUP47YE&linkCode=as2&tag=curioschron01-21">Lot de 275 diodes LED et 100 résistances pour 8,5€ livraison rapide</a><img src="http://ir-fr.amazon-adsystem.com/e/ir?t=curioschron01-21&l=as2&o=8&a=B01FUP47YE" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 
-## 1 résistance de 100 ou 330 ohm
+## 1 x résistance de 100 ou 330 ohm
 <img src="/images/resistor-330r.png"  width="20%" heigth ="20%"/>
 * <a rel="nofollow" href="https://www.amazon.fr/gp/product/B00RRRQ4TU/ref=as_li_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=B00RRRQ4TU&linkCode=as2&tag=curioschron01-21">Lot de 200 résistors, 4 niveau de résistance différents pour 6€ et livraison rapide</a><img src="http://ir-fr.amazon-adsystem.com/e/ir?t=curioschron01-21&l=as2&o=8&a=B00RRRQ4TU" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 
-## 2 câbles mâle - femelle / 2 câbles mâle - mâle / 2 câbles femelle - femelle 
+## 2 x câbles mâle - femelle / 2 x câbles mâle - mâle / 2 x câbles femelle - femelle 
 <img src="/images/jumper-male-to-female.png" width="20%" heigth ="20%"/>
 <img src="/images/jumper-female-to-female.png" width="20%" heigth ="20%"/>
 <img src="/images/jumper-male-to-male.png"  width="20%" heigth ="20%"/>
