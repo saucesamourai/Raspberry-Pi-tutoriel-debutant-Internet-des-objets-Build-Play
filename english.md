@@ -12,6 +12,7 @@ You will find the best tutorials to learn physical computing with Python on the 
   * [Using a light-dependent resistor](https://www.raspberrypi.org/learning/physical-computing-with-python/ldr/)
   * [Using an ultrasonic distance sensor HC-SR04](https://www.raspberrypi.org/learning/physical-computing-with-python/distance/)
   * [Using a PIR motion sensor](https://www.raspberrypi.org/learning/physical-computing-with-python/pir/)
+  * [Control analogue devices](https://www.raspberrypi.org/learning/physical-computing-with-python/analogue/)
 
 By the end of this course, you should be able to imagine and realise your own projects like :
 
