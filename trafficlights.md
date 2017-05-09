@@ -1,8 +1,16 @@
-# Traffic lights
+![Build & Play, les meilleurs tutoriels DIY pour débuter et progresser dans l'univers de l'Internet des Objets](BuildnPlay_small.png)
 
-For this worksheet you'll need a breadboard, three LEDs, a button, a buzzer, and the necessary jumper cables and resistors. You can purchase these individually, or get everything you need in the [CamJam EduKit](https://thepihut.com/products/camjam-edukit).
+# Feu de signalisation 
 
-## Wiring
+Pour ce tutoriel, vous aurez besoin des éléments suivants :
+ - une plaquette de câblage (breadboard)
+ - trois LED
+ - un bouton
+ - un buzzer
+ - des câbles
+ - des résistances 330 Ohms
+
+## Câblage
 
 To get started, you'll need to place all the components on the breadboard and connect them to the appropriate GPIO pins on the Raspberry Pi.
 
