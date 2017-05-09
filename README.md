@@ -36,8 +36,13 @@ Si vous n'avez rien de tout ça, nous avons conçu le  [kit de démarrage "Inter
 
 # Sommaire 
 - [Premiers pas (avec des LED!)](worksheet.md)
+- [Utiliser un Buzzer actif](buzzer.md)
+- [Fabriquer un feu de signalisation automatique](trafficlights.md)
+- [Utiliser une photo-résistance](ldr.md)
+- [Utiliser un module de mesure de distance à ultrasons HD-SR04](distance.md)
 - [Utiliser un détecteur de mouvement infrarouge](pir.md)
-- [Utiliser un module de mesure de distance à ultrasons](distance.md)
+- [Contrôler des composants analogiques](analogue.md)
+
 
 # Licence
 
