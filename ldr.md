@@ -30,33 +30,36 @@ En calculant le temps nécessaire pour que
 
 ## Résistance photo-sensible (ligh dependent resistor - LDR)
 
-Une LDR est un type de résistance.
+Une LDR est un type spécifique de résistance.
 
 ![](images/ldr.png)
 
-When light hits the LDR, its resistance is very low, but when it's in the dark its resistance is very high.
 
-By placing a capacitor in series with an LDR, the capacitor will charge at different speeds depending on whether it's light or dark.
+Lorsque la lumière atteint la LDR, la résistance de cette dernière diminue, mais dans le noir, sa résistance est très élevée.
 
-## Creating a light-sensing circuit
+En plaçant un condensateur en série avec la  LDR, le condensateur se chargera à différentes vitesses selon qu'il soit exposé à de la lumiere ou non.
 
-1.  Place an LDR into your breadboard, as shown below:
+## Créer un circuit photo-sensible
+
+1.  Installer votre LDR sur votre circuit comme montré ci-dessous:
 
 ![](images/Laser-tripwire_1-01.png)
 
-1.  Now place a capacitor in series with the LDR. As the capacitor is a polar component, you must make sure the long leg is on the same track as the LDR leg.
+1.  Maintenance ajouter le condensateur en serie avec la LDR. Comme le condensateur est un composant bi-polaire, assurer vous que la longue patte est sur la même patte que celle de la LDR.
 
 ![](images/Laser-tripwire_2-01.png)
 
-1.  Finally, add jumper leads to connect the two components to your Raspberry Pi.
+1.  Enfin, ajouter un cable afin de connecter les deux élements à votre Raspberry Pi.
 
 ![](images/Laser-tripwire_3-01.png)
 
-## Coding a light sensor
+## Coder un capteur de lumiere
 
 Luckily, most of the complicated code you would have to write to detect the light levels received by the LDR has been abstracted away by the `gpiozero` library. This library will handle the timing of the capacitor's charging and discharging for you.
 
-Use the following code to set up the light sensor:
+La majeure partie du code à écrire pour détecter les différents niveaux lumineux reçus par la LDR est issue de la bibliothèque `gpiozero`. Cette bibliothèque traitera la charge et la décharge du condensateur pour vous.
+
+Utiliser le code suivant pour mettre en route votre capteur de lumiere:
 
 ```python
   from gpiozero import LightSensor, Buzzer
@@ -66,10 +69,9 @@ Use the following code to set up the light sensor:
       print(ldr.value)
 
 ```
+Compiler votre code puis passer votre main sur la LDR. Vous devriez pouvoir observer la valeur changeée en fonction de l'intensité lumineuse à laquelle la LDR est exposee. 
 
-Run this code, then cover the LDR with your hand and watch the value change. Try shining a strong light onto the LDR.
+## Et ensuite ?
 
-## What Next?
-
-- You could have a go at using your new knowledge of LDRs to build a [laser-tripwire](https://www.raspberrypi.org/learning/laser-tripwire/).
-- Continue to the next worksheet on using a [Passive Infra-red Sensor](pir.md)
+- You pouvez mettre en pratique vos nouvelles connaissances pour construire un [laser-tripwire](https://www.raspberrypi.org/learning/laser-tripwire/).
+- Passez à l'étape suivante avec un [Passive Infra-red Sensor](pir.md)
