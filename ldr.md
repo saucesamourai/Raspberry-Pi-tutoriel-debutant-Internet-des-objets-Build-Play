@@ -1,6 +1,6 @@
 # Résistance photo-sensible 
 
-## Entre analogique
+## Entrée analogique
 
 En génie électrique, il existe deux types d'entrées / sorties (E / S): une première categorie dite analogique et une seconde dite numériques. Les E / S numériques sont assez faciles à comprendre : elles n'ont que deux états : on/off, 0 ou 1.
 
@@ -72,4 +72,4 @@ Compiler votre code puis passer votre main sur la LDR. Vous devriez pouvoir obse
 ## Et ensuite ?
 
 - You pouvez mettre en pratique vos nouvelles connaissances pour construire un [laser-tripwire](https://www.raspberrypi.org/learning/laser-tripwire/).
-- Passez à l'étape suivante avec un [Passive Infra-red Sensor](pir.md)
+- Passez à l'étape suivante avec un [Detecteur de mouvement infrarouge](pir.md)
