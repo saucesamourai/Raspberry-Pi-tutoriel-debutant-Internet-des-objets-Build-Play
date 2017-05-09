@@ -55,8 +55,6 @@ En plaçant un condensateur en série avec la  LDR, le condensateur se chargera 
 
 ## Coder un capteur de lumiere
 
-Luckily, most of the complicated code you would have to write to detect the light levels received by the LDR has been abstracted away by the `gpiozero` library. This library will handle the timing of the capacitor's charging and discharging for you.
-
 La majeure partie du code à écrire pour détecter les différents niveaux lumineux reçus par la LDR est issue de la bibliothèque `gpiozero`. Cette bibliothèque traitera la charge et la décharge du condensateur pour vous.
 
 Utiliser le code suivant pour mettre en route votre capteur de lumiere:
