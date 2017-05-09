@@ -1,31 +1,31 @@
-# Buzzers
+# Les Buzzers
 
-There are two main types of buzzer: *active* and *passive*.
+Il existe deux principales catégories de buzzers: *actifs* et *passifs*.
 
-A *passive* buzzer emits a tone when a voltage is applied across it. It also requires a specific signal to generate a variety of tones. The *active* buzzers are a lot simpler to use, so these are covered here.
+Un buzzer *passif* émet un son lorsqu'une tension est appliquée à ses bornes. Il nécessite un signal spécifique pour générer une variété de sons. Le buzzer *actif* est beaucoup plus simple à utiliser, c'est donc de lui que nous allons traiter dans ce tutoriel.
 
-## Connecting a buzzer
+## Connecter un buzzer
 
-An *active* buzzer can be connected just like an LED, but as they are a little more robust, you won't be needing a resistor to protect them.
+Un buzzer *actif* se branche comme une LED, mais ils sont plus costauds et vous n'aurez pas besoin d'une résistance pour le protéger.
 
-Set up the circuit as shown below:
+Préparez votre circuit comme ci-dessous:
 
 ![buzzer](images/buzzer-circuit.png)
 
-1. Add `Buzzer` to the `from gpiozero import...` line:
+1. Pour importer la fonction Buzzer dans Python, ajoutez `Buzzer` à la ligne: `from gpiozero import...` :
 
     ```python
     from gpiozero import Buzzer
 	from time import sleep
     ```
 
-1. Add a line below your creation of `button` and `lights` to add a `Buzzer` object:
+1. Ajoutez la ligne ci-dessous pour ajouter un objet `Buzzer` :
 
     ```python
     buzzer = Buzzer(17)
     ```
 
-1. In GPIO Zero, a `Buzzer` works exactly like an `LED`, so try adding a `buzzer.on()` and `buzzer.off()` into your loop:
+1. Dans GPIO Zero, un `Buzzer` fonctionne exactement comme une 'LED', donc essayez d'ajouter une boucle contenant `buzzer.on()` et `buzzer.off()` :
 
     ```python
     while True:
@@ -36,13 +36,13 @@ Set up the circuit as shown below:
 
     ```
 
-1. A `Buzzer` has a `beep()` method which works like an `LED`'s `blink`. Try it out:
+1. Le `Buzzer` dispose aussi d'une méthode `beep()` qui fonctionne comme la méthode `blink` d'une 'LED, c'est à dire qui permet de la faire clignoter. Essayez:
 
     ```python
     while True:
         buzzer.beep()
     ```
 
-## What Next?
+## Et ensuite?
 
-- Continue to the next worksheet on building a [traffic lights](trafficlights.md) system using GPIO Zero.
+- Continuez au prochain tutoriel pour fabriquer votre propre [feu rouge](trafficlights.md) en utilisant GPIO Zero.
