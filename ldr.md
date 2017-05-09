@@ -1,32 +1,36 @@
-# Light-dependent resistor (LDR)
+# Résistance photo-sensible 
 
-## Analogue inputs
+## Entre analogique
 
-In the world of electrical engineering, there are two type of input and output (I/O): analogue and digital. Digital I/O is fairly easy to understand; it's either *on* or *off*, *1* or *0*.
+En génie électrique, il existe deux types d'entrées / sorties (E / S): une première categorie dite analogique et une seconde dite numériques. Les E / S numériques sont assez faciles à comprendre : elles n'ont que deux états : on/off, 0 ou 1.
 
-When talking about voltages and the Raspberry Pi, any input that is approximately below 1.8V is considered *off* and anything above 1.8V is considered *on*. For output, 0V is off and 3.3V is on.
+Concernant les tensions d'entrée sur le Raspberry Pi, toute entrée inférieure à 1,8V est considérée comme off. Si elle est supérieure à 1,8V est considérée comme on. Pour la sortie, 0V est off et 3.3V est on.
 
-Analogue I/O is a little trickier. With an analogue input, we can have a range of voltages from 0V up to 3.3V, and the Raspberry Pi is unable to detect exactly what that voltage is.
+Les entrées analogiques sont un peu plus complexes. Contrairement aux entrées numériques, le Rapberry Pi peut recevoir n'importe quel voltage compris entre 0V et 3.3V. En conséquence, le Raspberry Pi ne peut pas detecter de quoi il s'agit exactement.
+
 
 ![](images/analogue-digital.png)
 
-How, then, can we use a Raspberry Pi to determine the value of an analogue input, if it can only tell when the voltage to a GPIO pin goes above 1.8V?
+La question naturelle est donc comment pouvons-nous utiliser un Raspberry Pi pour déterminer la valeur d'une entrée analogique et la convertir en un signal utile pour le Raspberry Pi?
 
-### Using a capacitor for analogue inputs
 
-Capacitors are electrical components that store charge.
+### Utilisation d'un condensateur pour lire les entrées analogiques
+
+Les condensateurs sont des composants électriques capables de stocker de l'électricité.
 
 ![](images/capacitor.png)
 
-When current is fed into a capacitor, it will begin to store charge. The voltage across the capacitor will start off low, and increase as the charge builds up.
+Lorsque le courant alimente un condensateur, ce dernier va commencer à stocker les electrons injectés. La tension à travers le condensateur commencera au niveau bas, et augmentera à mesure que la charge s'accumule.
 
-By putting a resistor in series with the capacitor, you can slow the speed at which it charges. With a high resistance, the capacitor will charge slowly, whereas a low resistance will let it charge quickly.
+En mettant une résistance en série avec le condensateur, vous pouvez ralentir la vitesse à laquelle le condensateur se charge. Avec une résistance élevée, le condensateur se chargera lentement, alors qu'avec une faible résistance, la recharge du condensateur se fera plus rapidement.
 
-If you time how long it takes the capacitor's voltage to get over 1.8V (or be *on*), you can work out the resistance of the component in series with it.
+Il est alors possible de déterminer la valeur de résistance à utiliser en fonction du temps de charge du condensateur pour atteinder la valeur de 1.8V - valeur à partir de laquelle le Raspberry Pi considére l'etat comme actif (on).
+En calculant le temps nécessaire pour que 
 
-## Light-dependent resistors
 
-An LDR (sometimes called a photocell) is a special type of resistor.
+## Résistance photo-sensible (ligh dependent resistor - LDR)
+
+Une LDR est un type de résistance.
 
 ![](images/ldr.png)
 
