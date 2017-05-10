@@ -141,33 +141,32 @@ while True:
 
 ## Plusieurs potentiomètres
 
-1. Ajoutez un deuxième potentiomètre à votre carte à puce et connectez-le à la chaîne 1 de l'ADC: 
-Add a second potentiometer to your breadboard and connect it to the ADC's channel 1:
+1. Ajoutez un deuxième potentiomètre à votre circuit et connectez le au canal 1 de votre puce ADC: 
 
     ![Second potentiometer](images/mcp3008-2pots-led.png)
 
-1. Now create a second `MCP3008` object on channel 1:
+1. Créez un deuxième objet `MCP3008` sur le canal 1:
 
     ```python
     pot2 = MCP3008(1)
     ```
 
-1. Make the LED blink:
+1. Faites clignoter la LED:
 
     ```python
     led.blink()
     ```
 
-    The LED will blink continuously, one second on and one second off.
+    La LED va clignoter en continu : une seconde allumée et une seconde éteinte
 
-1. Change the `on_time` and `off_time` parameters to make it blink faster or slower:
+1. Changez les paramètres `on_time` and `off_time` afin de la faire clignoter plus ou moins vite:
 
     ```python
     led.blink(on_time=2, off_time=2)
     led.blink(on_time=0.5, off_time=0.1)
     ```
 
-1. Now use a loop to change the blink times according to the potentiometer values:
+1. Utilisez une boucle afin de faire changer la vitesse de clignotement en fonction de la valeur du potentiomètre :
 
     ```python
     while True:
@@ -175,11 +174,9 @@ Add a second potentiometer to your breadboard and connect it to the ADC's channe
         led.blink(on_time=pot.value, off_time=pot2.value, n=1, background=False)
     ```
 
-    Note you have to make it blink once in the foreground, so that each iteration gets time to finish before it updates the blink times.
+1. Tournez la molette afin de faire varier la vitesse de clignotement
 
-1. Rotate the dials to make it blink at different speeds!
-
-1. Also try changing `blink` to `pulse` and change `on_time` and `off_time` to `fade_in_time` and `fade_out_time` so that it fades in and out at different speeds, rather than just blinking on and off:
+1. Changez dans le code `blink` pour `pulse` et changez les paramètres `on_time` et `off_time` en `fade_in_time` et `fade_out_time` afin que la LED s'allume et s'éteigne à des vitesses différentes, plutôt que de juste s'allumer et s'éteindre:
 
     ```python
     while True:
@@ -187,7 +184,7 @@ Add a second potentiometer to your breadboard and connect it to the ADC's channe
         led.pulse(fade_in_time=pot.value, fade_out_time=pot2.value, n=1, background=False)
     ```
 
-1. Rotate the dials to change the effect.
+1. Tournez les molettes et amusez vous !
 
 ## What next?
 
