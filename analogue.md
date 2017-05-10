@@ -1,83 +1,85 @@
 ![Build & Play, les meilleurs tutoriels DIY pour débuter et progresser dans l'univers de l'Internet des Objets](BuildnPlay_small.png)
 
-# Analogue Inputs
+# Entrées analogiques
 
-The Raspberry Pi's GPIO pins are digital pins, so you can only set outputs to high or low, or read inputs as high or low. However, using an ADC chip (Analogue-to-Digital converter), you can read the value of analogue input devices such as potentiometers.
+Les broches GPIO de Raspberry Pi sont des broches numériques : les sorties ne peuvent prendre que deux états (on / off) et les entrées ne peuvent lire que des états binaires. Cependant, à l'aide d'une puce ADC (convertisseur analogique-numérique), il devient possible de lire la valeur des périphériques d'entrée analogique tels que les potentiomètres.
 
 ## SPI
 
-The analogue values are communicated to the Pi using the SPI protocol. While this will work in GPIO Zero out of the box, you may get better results if you enable full SPI support.
+Les valeurs analogiques sont communiquées au Pi en utilisant un protocole appelé protocole SPI. Bien que cela fonctionne déja avec GPIO Zero, vous pouvez obtenir de meilleurs résultats si vous utilisez le protocole SPI.
 
-1. Open a terminal window and install the `spidev` package:
+1. Ouvrez votre terminal et installez le package 'spidev' 
 
     ```bash
     sudo apt-get install python3-spidev python-spidev
     ```
 
-1. Open the **Raspberry Pi Configuration** dialogue from the main menu and enable **SPI** in the **Interfaces** tab:
+1. Ouvrez le panneau de configuration de votre Raspberry Pi depuis le menu principal et activez le protocole SPI dans la section Interfaces
 
     ![Enable SPI](images/rcgui.png)
 
-1. Click **OK** and reboot the Pi.
+1. Clickez sur **OK** et rebooter votre Raspberry Pi.
 
-## Wiring the ADC (MCP3008)
+## Connecter votre puce ADC (MCP3008)
 
-The MCP3008 is an ADC providing eight input channels. The eight connectors on one side are connected to the Pi's GPIO pins, and the other eight are available to connect analogue input devices to read their values.
+Le MCP3008 est une puce ADC fournissant huit canaux d'entrée. Les huit connecteurs d'un côté sont connectés aux broches GPIO de Pi, et les huit autres sont disponibles pour connecter des périphériques d'entrée analogiques.
 
-Place the MCP3008 chip on a breadboard and carefully wire it up as shown in the following diagram:
+Placez la puce MCP3008 dans votre circuit et branchez la soigneusement comme indiqué sur le schéma suivant:
 
 ![MCP3008 wiring](images/mcp3008.png)
 
-Alternatively, you could use the [Analog Zero](http://rasp.io/analogzero/) board, which provides the MCP3008 chip on a handy add-on board to save you from the complicated wiring.
+Alternativement, vous pouvez utiliser le tableau [Analog Zero] (http://rasp.io/analogzero/), qui fournit la puce MCP3008 sur un circuit prêt à l'emploi ainf de vous éviter un câblage compliqué.
 
-## Add a potentiometer
+## Ajoutez un potentiomètre
 
-Now that the ADC is connected to the Pi, you can wire devices up to the input channels. A potentiometer is a good example of an analogue input device: it's simply a variable resistor, and the Pi reads the voltage (from 0V to 3.3V).
+Maintenant que la puce ADC est connectée au Pi, vous pouvez connecter les périphériques aux canaux d'entrée. Un potentiomètre est un bon exemple d'un dispositif d'entrée analogique: il s'agit simplement d'une résistance variable. Le Raspberry Pi lit la tension (comprise entre 0V et 3.3V).
 
-![Potentiometer](images/potentiometer.jpg)
+![Potentiomètre](images/potentiometer.jpg)
 
 A potentiometer's pins are ground, data, and 3V3. This means you connect it to ground and a supply of 3V3, and read the actual voltage from the middle pin.
 
-1. Place a potentiometer on the breadboard and wire one side to the ground rail, the other to the 3V3 rail, and the middle pin to the first input channel as shown:
+Le potentiomètre comprend trois broches: la masse, la donnée et 3V3. Cela signifie qu'il vous faut le connecter à la masse et à une alimentation de 3V3 afin de pouvoir lire la tension réelle sur la broche du milieu.
+
+1. Placez un potentiomètre sur le circuit et branchez le d'un côté à la masse, de l'autre sur la broche de 3V3 et enfin à la broche centrale sur le premier canal d'entrée comme indiqué:
 
     ![Add a potentiometer](images/mcp3008-pot.png)
 
-## Code
+## Codez
 
-Now your potentiometer is connected and its value can be read from Python!
+Maintenant que votre potentiomètre est connecté, sa valeur peut être lue depuis Python !
 
-1. Open **Python 3** from the main menu.
+1. Ouvrez **Python 3** depuis le menu principal.
 
-1. In the shell, start by importing the `MCP3008` class from the GPIO Zero library:
+1. Dans le terminal, importez la classe `MCP3008` de la librairie GPIO Zero
 
     ```python
     from gpiozero import MCP3008
     ```
 
-1. Create an object representing your analogue device:
+1. Créer un objet représentant Create an object représentant le potentiomètre:
 
     ```python
     pot = MCP3008(0)
     ```
 
-    Note the `0` represents the ADC's channel 0. There are 8 channels (0 to 7), and you're using the first one.
+    Il est important de noter que le `0` représente le canal 0 de l'ADC. Il existe 8 canaux (de 0 à 7). 
 
-1. Try to read its value:
+1. Essayez de lire sa valeur:
 
     ```python
     print(pot.value)
     ```
 
-    You should see a number between 0 and 1. This represents how far the dial is turned.
+    Vous devriez voir un nombre entre 0 et 1, correspondant à la rotation de la molette du potentiomètre.
 
-1. Now read the value in a loop:
+1. Maintenant lisez la valeur dans une boucle:
 
     ```python
     while True:
         print(pot.value)
     ```
 
-    Try twisting the dial around to see the value change.
+    Tournez la molette afin de voir la valeur changée.
 
 ## PWMLED
 
