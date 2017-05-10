@@ -83,27 +83,27 @@ Maintenant que votre potentiomètre est connecté, sa valeur peut être lue depu
 
 ## PWMLED
 
-Now you've tested you can read values from the potentiometer, you should connect it to another GPIO device.
+Maintenant que vous avez pu lire les valeurs du potentiomètre, nous allons le connecter à un autre périphérique GPIO. 
 
-1. Add an LED to your breadboard and wire it to the Pi, connecting it to GPIO pin 21:
+1. Ajoutez une LED à votre circuit et connectée là à la broche 21 des GPIO:
 
     ![Add LED](images/mcp3008-pot-led.png)
 
-1. In your Python code, start by importing the `PWMLED` class:
+1. Dans votre code Python, importez la classe `PWMLED` :
 
     ```python
     from gpiozero import PWMLED
     ```
 
-    The `PWMLED` class lets you control the brightness of an LED using PWM, or pulse-width modulation. 
+    La classe `PWMLED` vous permet de contrôler la luminosité de la LED en utilisant la PWM (pulse-width modulation). 
 
-1. Create a `PWMLED` object on pin 21:
+1. Créer un objet `PWMLED` sur l'entrée 21:
 
     ```python
     led = PWMLED(21)
     ```
 
-1. Test you can control the LED manually:
+1. Testez de contrôler manuellement la LED:
 
     ```python
     led.on()  # the led should be lit
@@ -111,33 +111,38 @@ Now you've tested you can read values from the potentiometer, you should connect
     led.value = 0.5  # the led should be lit at half brightness
     ```
 
-1. Now connect the LED to the potentiometer:
+1. Connectez la LED au potentiomètre :
 
     ```python
     led.source = pot.values
     ```
 
-1. Turn the dial to change the LED brightness!
+1. Tournez la molette du potentiomètre afin de faire changer la luminosité de la LED !
 
-### Source and values
+### "Source and Values"
 
-GPIO Zero has a powerful feature: **source and values**. Every device has a `value` property (the current value) and a `values` property (a stream of the device's values at all times). Every output device has a `source` property which can be used to set what the device's value should be.
+La librairie GPIO Zero a une feature très puissante appelée : **source and values**. 
 
-- `pot.value` gives the potentiometer's current value (it's read only, as it's an input device)
-- `led.value` is the LED's current value (it's read/write: you can see what it is, and you can change it)
-- `pot.values` is a generator constantly yielding the potentiometer's current value
-- `led.source` is a way of setting where the LED gets its values from
+Every device has a `value` property (the current value) and a `values` property (a stream of the device's values at all times). Every output device has a `source` property which can be used to set what the device's value should be.
 
-Rather than continuously setting the value of the LED to the value of the potentiometer in a loop, you can just pair the two devices. Therefore the line `led.source = pot.values` is equivalent to the following loop:
+Chaque périphérique possède une propriété `value` (la valeur actuelle) et une propriété` values` (un flux de valeurs du périphérique en tout temps). Chaque périphérique de sortie possède une propriété `source` qui peut être utilisée pour définir la valeur d'entrée.
+
+- `pot.value` donne la valeur actuelle du potentiomètre (il est seulement lu car il s'agit d'un périphérique d'entrée)
+- `led.value` est la valeur actuelle de la LED (c'est en mode lecture / écriture: vous pouvez voir ce qu'elle est et vous pouvez la modifier)
+- `pot.values` génère en continu la valeur actuelle du potentiomètre
+- `led.source` est une manière de définir d'où la LED obtient ses valeurs
+
+Plutôt que de régler en continu la valeur de la LED à la valeur du potentiomètre dans une boucle, vous pouvez simplement jumeler les deux périphériques. Par conséquent, la ligne `led.source = pot.values` est équivalente à la boucle suivante:
 
 ```python
 while True:
     led.value = pot.value
 ```
 
-## Multiple potentiometers
+## Plusieurs potentiomètres
 
-1. Add a second potentiometer to your breadboard and connect it to the ADC's channel 1:
+1. Ajoutez un deuxième potentiomètre à votre carte à puce et connectez-le à la chaîne 1 de l'ADC: 
+Add a second potentiometer to your breadboard and connect it to the ADC's channel 1:
 
     ![Second potentiometer](images/mcp3008-2pots-led.png)
 
