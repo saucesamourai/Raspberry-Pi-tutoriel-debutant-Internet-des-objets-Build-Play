@@ -188,9 +188,8 @@ while True:
 
 ## What next?
 
-- Use potentiometers to control other GPIO Zero output devices
-- Use potentiometers to control the speed of motors
-- Use potentiometers to control the visual settings of a Camera Module in real time
-- Find more analogue sensors that will work with the ADC
-- Use potentiometers to control a player in a [PyGame Zero](http://pygame-zero.readthedocs.io) game, or in [Minecraft](https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/)
-- Continue to the next worksheet on using [Motors](motors.md)
+- Utilisez des potentiomètres pour commander d'autres périphériques de sortie GPIO Zero
+- Utiliser des potentiomètres pour contrôler la vitesse des moteurs
+- Utiliser des potentiomètres pour contrôler les réglages visuels d'un module de caméra en temps réel
+- Trouver plus de capteurs analogiques qui fonctionneront avec la puce ADC
+- Utilisez des potentiomètres pour contrôler un joueur dans un jeu [PyGame Zero] (http://pygame-zero.readthedocs.io) ou dans [Minecraft] (https://www.raspberrypi.org/learning/getting-started- Avec-minecraft-pi /)
