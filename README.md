@@ -35,6 +35,9 @@ Si vous n'avez rien de tout ça, nous avons conçu le  [kit de démarrage "Inter
 
 
 # Sommaire 
+
+Si vous ne savez pas par où commencez, suivez les tutoriels dans l'ordre ci-dessous: 
+
 - [Premiers pas (avec des LED!)](worksheet.md)
 - [Utiliser un Buzzer actif](buzzer.md)
 - [Fabriquer un feu de signalisation automatique](trafficlights.md)
