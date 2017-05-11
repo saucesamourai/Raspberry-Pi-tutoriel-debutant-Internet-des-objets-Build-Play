@@ -56,4 +56,3 @@ Basé sur les tutoriels officiels de la fondation Raspberry Pi, traduit et enric
 https://github.com/raspberrypilearning/physical-computing-with-python
 https://github.com/saucesamourai/Raspberry-Pi-tutoriel-debutant-Internet-des-objets-Build-Play
 
-Tools graphic by Freepik from Flaticon is licensed under Creative Commons BY 3.0. Made with Logo Maker
