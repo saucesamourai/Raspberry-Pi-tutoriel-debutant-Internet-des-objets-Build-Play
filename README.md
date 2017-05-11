@@ -1,4 +1,4 @@
-![Build & Play, les meilleurs tutoriels DIY pour débuter et progresser dans l'univers de l'Internet des Objets](BuildnPlay_small.png)
+![Make & Play, les meilleurs tutoriels DIY pour débuter et progresser dans l'univers de l'Internet des Objets](BuildnPlay_small.png)
 
 # Vos premiers pas dans l'univers de l'Internet des Objets avec le Raspberry Pi 3 et Python
 
@@ -31,7 +31,7 @@ Avant de commencer, assurez-vous d'avoir tout le matériel nécessaire pour fair
 
 ## Les composants électroniques
 En plus de Raspberry Pi et de ses éléments auxiliaires, nous allons avoir besoin de plusieurs éléments électroniques pour nos montages, que vous trouverez dans la [liste de composants](requirements.md).
-Si vous n'avez rien de tout ça, nous avons conçu le  [kit de démarrage "Internet des objets" Build & Play](https://www.amazon.fr/dp/B01N0TKCJN) pour vous simplifier la vie, qui contient tous les composants nécessaires à un prix imbattable et qui peut être livré chez vous dès demain.
+Si vous n'avez rien de tout ça, nous avons conçu le  [kit de démarrage "Internet des objets" Make & Play](https://www.amazon.fr/dp/B01N0TKCJN) pour vous simplifier la vie, qui contient tous les composants nécessaires à un prix imbattable et qui peut être livré chez vous dès demain.
 
 
 # Sommaire 
@@ -52,7 +52,7 @@ Sauf exception mentionnée, tout le contenu de ce répertoire est couvert part l
 
 ***Physical Computing with Python*** by the [Raspberry Pi Foundation](http://www.raspberrypi.org) is licenced under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
-Basé sur les tutoriels officiels de la fondation Raspberry Pi, traduit et enrichi par Build & Play 
+Basé sur les tutoriels officiels de la fondation Raspberry Pi, traduit et enrichi par Make & Play 
 https://github.com/raspberrypilearning/physical-computing-with-python
 https://github.com/saucesamourai/Raspberry-Pi-tutoriel-debutant-Internet-des-objets-Build-Play
 
