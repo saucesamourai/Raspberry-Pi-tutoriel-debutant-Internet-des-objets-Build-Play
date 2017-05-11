@@ -21,7 +21,7 @@ Pour commencer, installez tous les composants sur la plaquette breadboard et con
     
     Chaque composant a besoin de sa propre broche PGIO, mais peuvent partager la même broche de masse. Nous allons utiliser la plaquette pour permettre ces connexions.
     
-1. Placez les composants sur la plaquette et connectez les au broches GPIO du Raspberry Pi, selon le schéma suivant:agram:
+1. Placez les composants sur la plaquette et connectez les au broches GPIO du Raspberry Pi, selon le schéma suivant:
 
     ![GPIO diagram](images/camjam1wiring.png)
 
