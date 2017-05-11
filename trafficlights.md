@@ -12,25 +12,24 @@ Pour ce tutoriel, vous aurez besoin des éléments suivants :
 
 ## Câblage
 
-To get started, you'll need to place all the components on the breadboard and connect them to the appropriate GPIO pins on the Raspberry Pi.
+Pour commencer, installez tous les composants sur la plaquette breadboard et connectez les aux pins GPIO du Raspberry Pi.
 
-1. First, you need to understand how each component is connected:
-
-    - A push button requires 1 ground pin and 1 GPIO pin
-    - An LED requires 1 ground pin and 1 GPIO pin, with a current limiting resistor
-    - A buzzer requires 1 ground pin and 1 GPIO pin
-
-    Each component requires its own individual GPIO pin, but components can share a ground pin. We will use the breadboard to enable this.
-
-1. Place the components on the breadboard and connect them to the Raspberry Pi GPIO pins, according to the following diagram:
+1. Tout d'abord, vous devez comprendre comment chaque composant est connecté :
+    - Un bouton poussoir nécessite une broche de masse et une broche GPIO
+    - Une LED nécessite une une broche de masse et une broche GPIO et une résistance pour limiter le courant
+    - Un buzzer nécessite une broche de masse et une broche GPIO
+    
+    Chaque composant a besoin de sa propre broche PGIO, mais peuvent partager la même broche de masse. Nous allons utiliser la plaquette pour permettre ces connexions.
+    
+1. Placez les composants sur la plaquette et connectez les au broches GPIO du Raspberry Pi, selon le schéma suivant:agram:
 
     ![GPIO diagram](images/camjam1wiring.png)
 
-    Note that the row along the long side of the breadboard is connected to a ground pin on the Raspberry Pi, so all the components in that row (which is used as a ground rail) are hence connected to ground.
+    Remarquez que la rangée sur le bord long de la breadboard est connectée à une broche de masse du Raspberry Pi. Donc, tous les composants reliés à cette rangée sont reliés à la masse.
+    
+1. Observez le tableau suivant, indiquant à quel port GPIO raccorder chaque composant:
 
-1. Observe the following table, showing which GPIO pin each component is connected to:
-
-| Component | GPIO pin |
+| Composant | broche GPIO |
 | --------- | :------: |
 | Button    | 21       |
 | Red LED   | 25       |
@@ -38,9 +37,9 @@ To get started, you'll need to place all the components on the breadboard and co
 | Green LED | 7        |
 | Buzzer    | 15       |
 
-## Dive into Python
+## Plongez dans le code Python
 
-Open the Python application IDLE and get started by testing out the button.
+Ouvrez l'application Python, et commençons en testant le bouton.
 
 1. Open **Python 3** from the main menu:
 
