@@ -41,15 +41,14 @@ Pour commencer, installez tous les composants sur la plaquette breadboard et con
 
 Ouvrez l'application Python, et commençons en testant le bouton.
 
-1. Open **Python 3** from the main menu:
-
+1. Ouvrez **Python 3** depuis le menu principal:
     ![Python 3](images/python3-app-menu.png)
 
-1. Create a new file by clicking **File** > **New File**. This will open up a second window.
+1. Créez un nouveau fichier en cliquant sur **File** > **New File**. Ceci ouvrira une seconde fenêtre.
 
-1. Save the new file straight away by clicking **File** > **Save**; name the file `trafficlights.py` and save it in your home folder.
+1. Enregistrez ce nouveau fichier en cliquant sur **File** > **Save**; nommez le fichier `trafficlights.py` et enregistrez le dans votre dossier d'accueil.
 
-1. Enter the following code:
+1. Tapez le code suivant:
 
     ```python
     from gpiozero import Button
@@ -60,11 +59,13 @@ Ouvrez l'application Python, et commençons en testant le bouton.
         print(button.is_pressed)
     ```
 
-    In GPIO Zero, you create an object for each component used. Each component interface must be imported from the `gpiozero` module, and an instance created on the GPIO pin number to which it is connected.
+   Dans GPIO Zero, nous créons un objet pour chaque composant utilisé. Chaque interface de composant doit être importée de la librairie 'gpiozero' et une instance doit être crée au niveau de la broche GPIO à laquelle chaque composant est connecté.
+   
 
-1. Save and run the code by pressing `Ctrl + S` and `F5`.
+1. Enregistrez et éxecutez le code en pressant les touches  `Ctrl + S` and `F5`.
 
-1. This will bring the original Python window into focus and will be constantly printing `False`. When you press the button this will switch to `True`, and when you let go it will return to `False`.
+1. La fenêtre Python va passer en mode focalisation, et va afficher 'False' en permancence. Quand vous pressez le bouton, l'affichage va passer à 'True', et quand vous relâchez le bouton, l'affichage repassera à 'False'.
+
 
     `button.is_pressed` is a property of the `button` object, which provides the state of the button (pressed or not) at any given time.
 
