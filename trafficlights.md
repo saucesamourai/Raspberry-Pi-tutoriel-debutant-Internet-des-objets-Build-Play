@@ -66,50 +66,50 @@ Ouvrez l'application Python, et commençons en testant le bouton.
 
 1. La fenêtre Python va passer en mode focalisation, et va afficher 'False' en permancence. Quand vous pressez le bouton, l'affichage va passer à 'True', et quand vous relâchez le bouton, l'affichage repassera à 'False'.
 
+    `button.is_pressed` est une propriété de l'objet 'button', qui donne l'état du bouton (enfoncé ou non) à chaque instant.
 
-    `button.is_pressed` is a property of the `button` object, which provides the state of the button (pressed or not) at any given time.
-
-1. Now return to the code window and modify your `while` loop to show the following:
+1. Maintenant retournez dans la fenêtre de code et modifiez votre boucle 'while' comme suit:
 
     ```python
     while True:
         if button.is_pressed:
-            print("Hello")
+            print("Bonjour")
         else:
-            print("Goodbye")
+            print("Au revoir")
     ```
 
-1. Run the code again and you'll see "Hello" printed when the button is pressed, and "Goodbye" when the button is not pressed.
+1. Executez le code à nouveau et vous devriez voir apparaître "Bonjour" lorsque vous pressez le bouton et "Au revoir" lorsque le bouton est relâché.
 
-1. Modify the loop again:
+1. Modifiez à nouveau la boucle:
 
     ```python
     while True:
         button.wait_for_press()
-        print("Pressed")
+        print("Enfoncé")
         button.wait_for_release()
-        print("Released")
+        print("Relâché")
     ```
 
-1. When you run the code this time, nothing will happen until you press the button, when you'll see "Pressed", then when you let go you'll see "Released". This will occur each time the button is pressed, but rather than continuously printing one or the other, it only does it once per press.
+1. Lorsque vous éxecutez le code cette fois-ci, rien ne se passe jusqu'à ce que vous enfonciez le bouton et alors vous verrez s'afficher "Enfoncé". Au moment où vous le relâchez, vous verrez "Relâché". Ceci ce reproduira à chaque fois que vous presserez le bouton, plutôt que de ré-afficher continuellement l'un ou l'autre des message.
 
-## Add an LED
+## Ajoutons une LED
 
-Now you'll add an LED into the code and use GPIO Zero to allow the button to determine when the LED is lit.
+Maintentant vous allez ajouter une LED dans le code et utiliser GPIO Zero pour permettre au bouton de contrôler l'allumage de la LED. 
 
-1. In your code, add to the `from gpiozero import...` line at the top to also bring in `LED`:
+
+1. Dans votre code, modifiez la ligne `from gpiozero import...` tout en haut,  pour aussi importer l'objet `LED`:
 
     ```python
     from gpiozero import Button, LED
     ```
 
-1. Add a line below `button = Button(21)` to create an instance of an `LED` object:
+1. Ajoutez une ligne en dessous de `button = Button(21)` pour créer une instance de l'objet `LED`:
 
     ```python
     led = LED(25)
     ```
 
-1. Now modify your `while` loop to turn the LED on when the button is pressed:
+1. Maintenant modifiez votre boucle 'while' pour allumer la LED lorsque le bouton est enfoncé:
 
     ```python
     while True:
@@ -119,9 +119,9 @@ Now you'll add an LED into the code and use GPIO Zero to allow the button to det
         led.off()
     ```
 
-1. Run your code and the LED will come on when you press the button. Hold the button down to keep the LED lit.
+1. Executez le code et testez le montage. La LED s'allume quand vous pressez le bouton. Maintenez le enfoncé pour maintenir la LED allumée.
 
-1. Now swap the `on` and `off` lines to reverse the logic:
+1. Maintenant inversez le lignes `on` et le `off` dans lcode pour inverser la logique:
 
     ```python
     while True:
@@ -131,9 +131,9 @@ Now you'll add an LED into the code and use GPIO Zero to allow the button to det
         button.wait_for_release()
     ```
 
-1. Run the code and you'll see the LED stays on until the button is pressed.
+1. Executez le code et vous devriez voir la LED allumée tant que le bouton n'est pas enfoncé.
 
-1. Now replace `led.on()` with `led.blink()`:
+1. Maintenant remplacez `led.on()` par `led.blink()`:
 
     ```python
     while True:
@@ -143,35 +143,36 @@ Now you'll add an LED into the code and use GPIO Zero to allow the button to det
         button.wait_for_release()
     ```
 
-1. Run the code and you'll see the LED blink on and off until the button is pressed, at which point it will turn off completely. When the button is released, it will start blinking again.
+1. Executez le code et vous verrez la LED clignoter tant que le bouton n'est pas enfoncé. Maintenez enfoncé le bouton pour mainteanir la LED éteinte.
 
-1. Try adding some parameters to `blink` to make it blink faster or slower:
+1. Essayez d'ajouter les paramètres suivants à 'blink' pour accélerer ou ralentir le clignotement:
 
-    - `led.blink(2, 2)` - 2 seconds on, 2 seconds off
-    - `led.blink(0.5, 0.5)` - half a second on, half a second off
-    - `led.blink(0.1, 0.2)` - one tenth of a second on, one fifth of a second off
+    - `led.blink(2, 2)` - 2 secondes on, 2 secondes off
+    - `led.blink(0.5, 0.5)` - Une demi seconde on, une demi seconde off
+    - `led.blink(0.1, 0.2)` - Un dixème de seconde one, un cinquière de seconde off
+    
+    Les deux premiers paramètres de `blink` sont `on_time` et `off_time`': ils valent chaqun 1 seconde par défaut.
 
-    `blink`'s first two (optional) parameters are `on_time` and `off_time`': they both default to 1 second.
+## Feu rouge
 
-## Traffic lights
+Choisissez trois LED de couleur différentes pour construire votre feu de signalisation.
+Il y a une interface déjà toute faite pour les feux rouges dans GPIO Zero, c'est dingue, non ?
 
-You have three LEDs: red, amber, and green. Perfect for traffic lights! There's even a built-in interface for traffic lights in GPIO Zero.
-
-1. Amend the `from gpiozero import...` line to replace `LED` with `TrafficLights`:
+1. Modifiez la ligne  `from gpiozero import...` pour remplacer `LED` par `TrafficLights`, l'objet "feu rouge":
 
     ```python
     from gpiozero import Button, TrafficLights
     ```
 
-1. Replace your `led = LED(25)` line with the following:
+1. Remplacez votre ligne `led = LED(25)` comme suit:
 
     ```python
     lights = TrafficLights(25, 8, 7)
     ```
 
-    The `TrafficLights` interface takes three GPIO pin numbers, one for each pin: red, amber, and green (in that order).
-
-1. Now amend your `while` loop to control the `TrafficLights` object:
+    L'interface `TrafficLights` utilise trois numéros de broche GPIO, un pour chaque LED: rouge, orange, vert (dans cette ordre)
+    
+1. Maintenant, modifiez votre boucle  `while` pour contrôler l'objet `TrafficLights`:
 
     ```python
     while True:
@@ -181,9 +182,9 @@ You have three LEDs: red, amber, and green. Perfect for traffic lights! There's 
         lights.off()
     ```
 
-    The `TrafficLights` interface is very similar to that of an individual LED: you can use `on`, `off`, and `blink`, all of which control all three lights at once.
+    L'interface `TrafficLights` est très similaire à celle d'une LED individuelle : vous pouvez utiliser `on`, `off`, et `blink`. En revanche ici, ces fonctions contrôlent toutes les LED en même temps. 
 
-1. Try the `blink` example:
+1. Prenez l'exemple de `blink`:
 
     ```python
     while True:
@@ -193,23 +194,23 @@ You have three LEDs: red, amber, and green. Perfect for traffic lights! There's 
         button.wait_for_release()
     ```
 
-## Add a buzzer
+## Ajoutez un buzzer à votre feu rouge
 
-Now you'll add your buzzer to make some noise.
+Maintenant, nous allons ajouter du son à l'image avec le buzzer.
 
-1. Add `Buzzer` to the `from gpiozero import...` line:
+1. Ajoutez `Buzzer` à la ligne `from gpiozero import...` :
 
     ```python
     from gpiozero import Button, TrafficLights, Buzzer
     ```
 
-1. Add a line below your creation of `button` and `lights` to add a `Buzzer` object:
+1. Ajoutez une ligne en dessous de la création des objets `button` et `lights` pour créer un objet `Buzzer`:
 
     ```python
     buzzer = Buzzer(15)
     ```
 
-1. `Buzzer` works exactly like `LED`, so try adding a `buzzer.on()` and `buzzer.off()` into your loop:
+1. `Buzzer` fonctionne exactement comme  `LED`, donc essayez d'ajouter  `buzzer.on()` et `buzzer.off()` dans la boucle:
 
     ```python
     while True:
@@ -221,7 +222,7 @@ Now you'll add your buzzer to make some noise.
         button.wait_for_release()
     ```
 
-1. `Buzzer` has a `beep()` method which works like `LED`'s `blink`. Try it out:
+1. `Buzzer` a une méthode `beep()` qui est l'équivalent de la méthode 'blink' pour les `LED`. Essayez-ça:
 
     ```python
     while True:
@@ -233,17 +234,17 @@ Now you'll add your buzzer to make some noise.
         button.wait_for_release()
     ```
 
-## Traffic lights sequence
+## La séquence du feu rouge
 
-As well as controlling the whole set of lights together, you can also control each LED individually. With traffic light LEDs, a button and a buzzer, you can create your own traffic lights sequence, complete with pedestrian crossing!
+Maintenant, créons la vraie séquence de fonctionnement du feu rouge, complète, avec la traversée des piétons!
 
-1. At the top of your file, below `from gpiozero import...`, add a line to import the `sleep` function:
+1. En haut du fichier, juste en dessous de la ligne `from gpiozero import...`, ajoutez une ligne pour importer la fonction `sleep` qui permet de temporiser:
 
     ```python
     from time import sleep
     ```
 
-1. Modify your loop to perform an automated sequence of LEDs being lit:
+1. Modifiez la boucle pour jouer la séquence automatique d'allumage des LED une à une:
 
     ```python
     while True:
@@ -256,7 +257,7 @@ As well as controlling the whole set of lights together, you can also control ea
         lights.off()
     ```
 
-1. Add a `wait_for_press` so that pressing the button initiates the sequence:
+1. Ajoutez un `wait_for_press` qui initiera la séquence:
 
     ```python
     while True:
@@ -270,24 +271,16 @@ As well as controlling the whole set of lights together, you can also control ea
         lights.off()
     ```
 
-    Try some more sequences of your own.
 
-1. Now try creating the full traffic lights sequence:
+1. Maintenant, essayez de créer d'autres séquences pour vous amuser.
 
-    - Green on
-    - Amber on
-    - Red on
-    - Red and amber on
-    - Green on
+1. Essayez d'ajouter un bouton pour les piétons qui souhaitent traverser. Le bouton devrait faire passer le feu au rouge après une courte attente, et laisser le temps aux piétons de traverser, puis renvoyer le feu au vert.
 
-    Be sure to turn the correct lights on and off at the right time, and make sure you use `sleep` to time the sequence perfectly.
+1. Ensuite, essayez d'ajouter un bruit du buzzer pour indiquer qu'il est possible de traverser en sécurité pour les personnes malvoyantes.
 
-1. Try adding the button for a pedestrian crossing. The button should move the lights to red (not immediately), and give the pedestrians time to cross before moving back to green until the button is pressed again.
 
-1. Now try adding a buzzer to beep quickly to indicate that it is safe to cross, for the benefit of visually impaired pedestrians.
+## Que faire ensuite?
 
-## What next?
-
-- Try adding a second button for the other side of the road. You'll probably need to use GPIO Zero `button.when_pressed` rather than `wait_for_press`, which can only be used for one button at a time.
-- Refer to the documentation at [gpiozero.readthedocs.org](https://gpiozero.readthedocs.org/) for more information on what can be done with GPIO Zero.
-- Continue to the next worksheet on using a [Light Dependent Resitor](ldr.md)
+- Amusez-vous à ajouter un second bouton, de l'autre côté de la rue. Vous aurez probablement besoin d'utiliser `button.when_pressed` plutôt que `wait_for_press`, qui ne peut être utilisée que pour un seul bouton à la fois.
+- Reportez vous à la documentation pour plus d'informations sur GPIO Zerio [gpiozero.readthedocs.org](https://gpiozero.readthedocs.org/).
+- Continuez au prochain tutorial sur les [Photo-résistances](ldr.md)
